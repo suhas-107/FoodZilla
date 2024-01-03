@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import Error from "./Components/Error";
+import About from "./Components/About";
 
 /* My Food App structure will look like this, 
             1) Header
@@ -23,6 +26,7 @@ import Footer from "./Components/Footer";
 */
 
 // AppLayout component to render: Header, Body and Footer Component
+
 const AppLayout = () => {
   return (
     <React.Fragment>
@@ -33,5 +37,33 @@ const AppLayout = () => {
   );
 };
 
+const appRouter=createBrowserRouter([
+  {
+
+    path: "/",
+
+    element:<AppLayout/>,
+
+    errorElement:<Error/>
+  },
+  {
+
+    path:"/about",
+
+    element: <About />
+  },
+
+
+
+
+
+])
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+
+root.render(<RouterProvider router={appRouter}/>);
+
+
