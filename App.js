@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import Error from "./Components/Error";
 import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 /* My Food App structure will look like this, 
             1) Header
@@ -29,35 +30,47 @@ import About from "./Components/About";
 
 const AppLayout = () => {
   return (
-    <React.Fragment>
-      <Header />
-      <Body />
-      <Footer />
-    </React.Fragment>
+    
+    <div>
+      <Header/>
+     
+      <Outlet/>
+
+      <Footer/>
+      </div>
+
+      
+
+      
+    
+      
   );
 };
 
-const appRouter=createBrowserRouter([
+const appRouter = createBrowserRouter([
   {
-
     path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
 
-    element:<AppLayout/>,
-
-    errorElement:<Error/>
+        path:"/",
+        element:<Body/>
+      }
+     
+      
+    ],
+    errorElement: <Error />,
   },
-  {
-
-    path:"/about",
-
-    element: <About />
-  },
-
-
-
-
-
-])
+]);
 
 
 

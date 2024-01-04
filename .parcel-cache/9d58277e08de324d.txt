@@ -1,11 +1,11 @@
-6055
+6056
 67E:\FRONT END\FoodZilla\node_modules\caniuse-lite\data\regions\CR.js133486760829081540 0
 64E:\FRONT END\FoodZilla\node_modules\domutils\lib\legacy.d.ts.map133486760774488992 0
 45E:\FRONT END\FoodZilla\node_modules\commander133486760743499572 1
 54E:\FRONT END\FoodZilla\node_modules\.package-lock.json133487730604240535 0
 56E:\FRONT END\FoodZilla\node_modules\@parcel\packager-raw133486760705158030 1
 45E:\FRONT END\FoodZilla\node_modules\@lezer\lr133486760743489567 1
-33E:\FRONT END\FoodZilla\Components133487763009481277 1
+33E:\FRONT END\FoodZilla\Components133488323573696722 1
 67E:\FRONT END\FoodZilla\node_modules\caniuse-lite\data\regions\PW.js133486760938864191 0
 86E:\FRONT END\FoodZilla\node_modules\dom-serializer\node_modules\entities\lib\encode.js133486760707468010 0
 59E:\FRONT END\FoodZilla\node_modules\@parcel\rust\index.d.ts133486760923244908 0
@@ -27,7 +27,7 @@
 78E:\FRONT END\FoodZilla\node_modules\@parcel\node-resolver-core\lib\builtins.js133486760703858007 0
 57E:\FRONT END\FoodZilla\node_modules\csso\cjs\compress.cjs133486760779919134 0
 83E:\FRONT END\FoodZilla\node_modules\@parcel\transformer-posthtml\lib\loadPlugins.js133486760679178061 0
-29E:\FRONT END\FoodZilla\App.js133487764610266601 0
+29E:\FRONT END\FoodZilla\App.js133488494069269659 0
 79E:\FRONT END\FoodZilla\node_modules\css-tree\cjs\tokenizer\OffsetToLocation.cjs133486760823571510 0
 66E:\FRONT END\FoodZilla\node_modules\electron-to-chromium\README.md133486760777919072 0
 65E:\FRONT END\FoodZilla\node_modules\css-select\lib\index.d.ts.map133486760801447202 0
@@ -54,12 +54,12 @@
 42E:\FRONT END\FoodZilla\node_modules\base-x133486760699228015 1
 58E:\FRONT END\FoodZilla\node_modules\lru-cache\package.json133486760682808416 0
 78E:\FRONT END\FoodZilla\node_modules\css-tree\cjs\utils\create-custom-error.cjs133486760781879076 0
-27E:\FRONT END\FoodZilla\dist133487767275039461 1
+27E:\FRONT END\FoodZilla\dist133488501321825838 1
 58E:\FRONT END\FoodZilla\node_modules\path-type\package.json133486760650669112 0
 79E:\FRONT END\FoodZilla\node_modules\@parcel\utils\test\input\config\config.json133486760810969648 0
 29E:\FRONT END\FoodZilla\Images133486712953650803 1
 103E:\FRONT END\FoodZilla\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\common\List.js133486760810879610 0
-32E:\FRONT END\FoodZilla\index.css133486832284231762 0
+32E:\FRONT END\FoodZilla\index.css133488501317782802 0
 51E:\FRONT END\FoodZilla\node_modules\semver\index.js133486760781779050 0
 82E:\FRONT END\FoodZilla\node_modules\@swc\helpers\esm\_skip_first_generator_next.js133486760840426262 0
 33E:\FRONT END\FoodZilla\index.html133486829303223518 0
@@ -5662,7 +5662,7 @@
 107E:\FRONT END\FoodZilla\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\tokenizer\index.js133486760809639673 0
 102E:\FRONT END\FoodZilla\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\atrule133486760829291528 1
 105E:\FRONT END\FoodZilla\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\create.js133486760791334230 0
-55E:\FRONT END\FoodZilla\dist\Food Fire Logo.d6729f87.png133487764635451970 0
+55E:\FRONT END\FoodZilla\dist\Food Fire Logo.d6729f87.png133488501320545891 0
 104E:\FRONT END\FoodZilla\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\index.js133486760808569737 0
 100E:\FRONT END\FoodZilla\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node133486760832051793 1
 102E:\FRONT END\FoodZilla\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\pseudo133486760828541803 1
@@ -6042,13 +6042,14 @@
 48E:\FRONT END\FoodZilla\Images\Food Fire Logo.png133486711309328562 0
 56E:\FRONT END\FoodZilla\Images\monolith-microservices.png133486711414428510 0
 49E:\FRONT END\FoodZilla\dist\FoodZilla.3464ddca.js133486765380265409 0
-45E:\FRONT END\FoodZilla\dist\index.7826abd7.js133487767274869251 0
-49E:\FRONT END\FoodZilla\dist\index.7826abd7.js.map133487767274979288 0
-46E:\FRONT END\FoodZilla\dist\index.9e4c6fd2.css133487764635451970 0
-50E:\FRONT END\FoodZilla\dist\index.9e4c6fd2.css.map133487764635451970 0
-38E:\FRONT END\FoodZilla\dist\index.html133487764639660355 0
-42E:\FRONT END\FoodZilla\Components\About.js133487682371736576 0
+45E:\FRONT END\FoodZilla\dist\index.7826abd7.js133488501321735834 0
+49E:\FRONT END\FoodZilla\dist\index.7826abd7.js.map133488501321815861 0
+46E:\FRONT END\FoodZilla\dist\index.9e4c6fd2.css133488501320515893 0
+50E:\FRONT END\FoodZilla\dist\index.9e4c6fd2.css.map133488501320585847 0
+38E:\FRONT END\FoodZilla\dist\index.html133488501321685952 0
+42E:\FRONT END\FoodZilla\Components\About.js133488332256524307 0
 41E:\FRONT END\FoodZilla\Components\Body.js133487400876235097 0
+44E:\FRONT END\FoodZilla\Components\Contact.js133488324767609946 0
 42E:\FRONT END\FoodZilla\Components\Error.js133487767272566178 0
 43E:\FRONT END\FoodZilla\Components\Footer.js133486879984247952 0
 43E:\FRONT END\FoodZilla\Components\Header.js133486830804539794 0

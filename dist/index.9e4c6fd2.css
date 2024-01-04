@@ -234,9 +234,10 @@
   text-align: center;
   background-color: var(--footer-bg-color);
   border-radius: 5px;
-  width: auto;
-  margin: 10px;
+  width: 100%;
   padding: 20px 10px;
+  position: fixed;
+  bottom: 0%;
   box-shadow: -1px 4px 20px 14px #0003;
 }
 
@@ -299,6 +300,13 @@
   .search-container {
     margin: 70px auto 0;
   }
+}
+
+.About, .Contact {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 300px;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

@@ -238,8 +238,9 @@
   
   /* footer CSS */
   .footer {
-    margin: 10px;
-    width: auto;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
     text-align: center;
     background-color: var(--footer-bg-color);
     padding: 20px 10px 20px;
@@ -301,3 +302,17 @@
       margin: 70px auto 0px;
     }
   }
+.About{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:300px;
+}
+.Contact{
+  width:100%;
+    height:100%;
+    position: absolute;
+    top:300px;
+  
+}
+
