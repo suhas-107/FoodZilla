@@ -7,6 +7,7 @@ import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import Error from "./Components/Error";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
+import RestaurantMenu from "./Components/RestaurantMenu";
 
 /* My Food App structure will look like this, 
             1) Header
@@ -52,6 +53,12 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <AppLayout />,
     children: [
+
+      {
+        path:"/restaurants/:resid",
+        element:<RestaurantMenu/>
+
+      },
       {
         path: "/about",
         element: <About />,
