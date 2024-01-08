@@ -40,6 +40,12 @@ if(restaurantinfo===null){
 const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[0]?.card?.card?.info
 
 
+const{itemCards}=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+
+console.log(itemCards)
+
+
+
 return(
 
      <div className="resinfo">
@@ -51,12 +57,11 @@ return(
       
       <div className="menu">
      <h1>MENU</h1>
-       
-       <h2>
 
+      <ul>
 
-        
-       </h2>
+        {itemCards.map((item)=> (<li key={item.card.info.id}>{item.card.info.name}</li>))}
+      </ul>
      </div>
 
 

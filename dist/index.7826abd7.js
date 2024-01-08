@@ -34681,6 +34681,8 @@ const RestaurantMenu = ()=>{
         columnNumber: 5
     }, undefined);
     const { name, aggregatedDiscountInfo, costForTwoMessage } = restaurantinfo?.cards[0]?.card?.card?.info;
+    const { itemCards } = restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    console.log(itemCards);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "resinfo",
         children: [
@@ -34691,7 +34693,7 @@ const RestaurantMenu = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 47,
+                lineNumber: 53,
                 columnNumber: 6
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34702,7 +34704,7 @@ const RestaurantMenu = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 49,
+                lineNumber: 55,
                 columnNumber: 6
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34713,7 +34715,7 @@ const RestaurantMenu = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 50,
+                lineNumber: 56,
                 columnNumber: 6
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34723,24 +34725,32 @@ const RestaurantMenu = ()=>{
                         children: "MENU"
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 53,
+                        lineNumber: 59,
                         columnNumber: 6
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        children: itemCards.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: item.card.info.name
+                            }, item.card.info.id, false, {
+                                fileName: "Components/RestaurantMenu.js",
+                                lineNumber: 63,
+                                columnNumber: 34
+                            }, undefined))
+                    }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 55,
-                        columnNumber: 8
+                        lineNumber: 61,
+                        columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 52,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Components/RestaurantMenu.js",
-        lineNumber: 45,
+        lineNumber: 51,
         columnNumber: 6
     }, undefined);
 };
