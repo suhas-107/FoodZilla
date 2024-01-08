@@ -309,4 +309,14 @@
   top: 300px;
 }
 
+.resinfo {
+  flex-direction: column;
+  gap: 10px;
+  margin: 35px;
+  padding: 10px;
+  display: flex;
+  position: absolute;
+  top: 150px;
+}
+
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

@@ -34660,6 +34660,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
 const RestaurantMenu = ()=>{
     _s();
@@ -34669,21 +34671,76 @@ const RestaurantMenu = ()=>{
     }, []);
     const fetchmenu = async ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.634103384495464&lng=73.81745181977749&restaurantId=769470&catalog_qa=undefined&submitAction=ENTER");
-        const menudata = data.json();
+        const menudata = await data.json();
+        console.log(menudata);
         setrestaurantinfo(menudata.data);
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "menu",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: " Name"
-        }, void 0, false, {
-            fileName: "Components/RestaurantMenu.js",
-            lineNumber: 38,
-            columnNumber: 6
-        }, undefined)
-    }, void 0, false, {
+    if (restaurantinfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "Components/RestaurantMenu.js",
         lineNumber: 36,
+        columnNumber: 5
+    }, undefined);
+    const { name, aggregatedDiscountInfo, costForTwoMessage } = restaurantinfo?.cards[0]?.card?.card?.info;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "resinfo",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: [
+                    " ",
+                    name
+                ]
+            }, void 0, true, {
+                fileName: "Components/RestaurantMenu.js",
+                lineNumber: 47,
+                columnNumber: 6
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    " ",
+                    aggregatedDiscountInfo.header,
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "Components/RestaurantMenu.js",
+                lineNumber: 49,
+                columnNumber: 6
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    " ",
+                    costForTwoMessage,
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "Components/RestaurantMenu.js",
+                lineNumber: 50,
+                columnNumber: 6
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "menu",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "MENU"
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantMenu.js",
+                        lineNumber: 53,
+                        columnNumber: 6
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {}, void 0, false, {
+                        fileName: "Components/RestaurantMenu.js",
+                        lineNumber: 55,
+                        columnNumber: 8
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Components/RestaurantMenu.js",
+                lineNumber: 52,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "Components/RestaurantMenu.js",
+        lineNumber: 45,
         columnNumber: 6
     }, undefined);
 };
@@ -34698,6 +34755,6 @@ $RefreshReg$(_c, "RestaurantMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["j2WyO","1xC6H","2Ew96"], "2Ew96", "parcelRequire30a3")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Shimmer":"eUWz6"}]},["j2WyO","1xC6H","2Ew96"], "2Ew96", "parcelRequire30a3")
 
 //# sourceMappingURL=index.7826abd7.js.map
