@@ -64,15 +64,16 @@ return(
       
       <div className="menu">
      <h1>MENU</h1>
-
+      
       <ul>
 
-        {itemCards.map((item)=> (<li key={item.card.info.id}>{item.card.info.name}</li>))}
+        {itemCards.map((item)=> (<li key={item.card.info.id}>{item.card.info.name}  -  Price : Rs{item.card.info.defaultPrice/100}/- </li>))}
       </ul>
      </div>
 
 
      </div>
+    //  Price: {item.card.info.defaultPrice}
 )
 
 

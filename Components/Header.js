@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import FoodFireLogo from "../Images/Food Fire Logo.png";
 
 // Title component for display logo
@@ -23,7 +24,9 @@ const Header = () => {
       <Title />
       <div className="nav-items">
         <ul>
+         <Link to="/">
           <li>Home</li>
+          </Link>
           <li>About</li>
           <li>Contact</li>
           <li>
