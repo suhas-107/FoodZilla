@@ -34702,7 +34702,7 @@ const RestaurantMenu = ()=>{
         columnNumber: 5
     }, undefined);
     const { name, aggregatedDiscountInfo, costForTwoMessage } = restaurantinfo?.cards[0]?.card?.card?.info;
-    const { itemCards } = restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    const { itemCards } = restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
     console.log(itemCards);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "resinfo",
@@ -34752,15 +34752,16 @@ const RestaurantMenu = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         children: itemCards.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
+                                    "  ",
                                     item.card.info.name,
-                                    "  -  Price : Rs",
-                                    item.card.info.defaultPrice / 100,
-                                    "/- "
+                                    "- Rs ",
+                                    item.card.info.price / 100 || item.card.info.defaultPrice / 100,
+                                    " /-"
                                 ]
                             }, item.card.info.id, true, {
                                 fileName: "Components/RestaurantMenu.js",
-                                lineNumber: 70,
-                                columnNumber: 34
+                                lineNumber: 72,
+                                columnNumber: 10
                             }, undefined))
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",

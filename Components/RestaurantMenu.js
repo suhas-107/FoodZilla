@@ -44,10 +44,10 @@ if(restaurantinfo===null){
   )
 }
 
-const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[0]?.card?.card?.info
+const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[0]?.card?.card?.info;
 
 
-const{itemCards}=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+const{itemCards}=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
 console.log(itemCards)
 
@@ -67,7 +67,12 @@ return(
       
       <ul>
 
-        {itemCards.map((item)=> (<li key={item.card.info.id}>{item.card.info.name}  -  Price : Rs{item.card.info.defaultPrice/100}/- </li>))}
+       {itemCards.map((item)=>(
+
+         <li key={item.card.info.id}>  {item.card.info.name}- Rs {item.card.info.price/100 || item.card.info.defaultPrice/100} /-</li>
+
+       ))}
+           
       </ul>
      </div>
 
