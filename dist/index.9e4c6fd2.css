@@ -41,12 +41,15 @@
 .nav-items > ul {
   justify-content: space-evenly;
   align-items: baseline;
+  margin: 10px;
+  padding: 10px;
   list-style-type: none;
   display: flex;
 }
 
 .nav-items > ul > li {
   cursor: pointer;
+  margin: 10px;
   padding: 10px;
   font-size: large;
 }
