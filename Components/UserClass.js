@@ -7,11 +7,20 @@ class UserClass extends React.Component{
     constructor(props){
 
         super(props);
+
+
+
+        this.state={
+
+            count:1
+        }
     }
     render(){
 
 
         const {name,email}=this.props;
+
+        const{count}=this.state;
 
         return(
 
@@ -25,6 +34,12 @@ class UserClass extends React.Component{
                 <h1>
                 
                 {email};
+                 
+                </h1>
+
+                <h1>
+                
+               {count}
                  
                 </h1>
             </div>

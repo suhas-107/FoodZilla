@@ -9,11 +9,11 @@ const About=()=>{
           
             <UserClass name="Suhas(class)" email="deshpandesuhas107@gmail.com(class)"/>
 
-            <br>
-                
-            </br>
+            <br/>
 
-           <User name="Suhas(function)" email="deshpandesuhas107@gmail.com(function)"/>
+            
+
+
 
             </div>
            

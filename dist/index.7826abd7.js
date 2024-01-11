@@ -34569,14 +34569,6 @@ const About = ()=>{
                 fileName: "Components/About.js",
                 lineNumber: 12,
                 columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {
-                name: "Suhas(function)",
-                email: "deshpandesuhas107@gmail.com(function)"
-            }, void 0, false, {
-                fileName: "Components/About.js",
-                lineNumber: 16,
-                columnNumber: 12
             }, undefined)
         ]
     }, void 0, true, {
@@ -34610,9 +34602,13 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 class UserClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
+        this.state = {
+            count: 1
+        };
     }
     render() {
         const { name, email } = this.props;
+        const { count } = this.state;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34622,7 +34618,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 20,
+                    lineNumber: 29,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34632,13 +34628,20 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 25,
+                    lineNumber: 34,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: count
+                }, void 0, false, {
+                    fileName: "Components/UserClass.js",
+                    lineNumber: 40,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Components/UserClass.js",
-            lineNumber: 18,
+            lineNumber: 27,
             columnNumber: 13
         }, this);
     }
