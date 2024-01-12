@@ -8,19 +8,22 @@ class UserClass extends React.Component{
 
         super(props);
 
-
+          console.log("Childs Constrcutor Rendered");
 
         this.state={
 
-            count:1
+            count1:1,
+            count2:2
+
         }
     }
     render(){
-
+          
+         console.log("Childs Coponents Render Function Rendered");
 
         const {name,email}=this.props;
 
-        const{count}=this.state;
+        const{count1}=this.state;
 
         return(
 
@@ -39,9 +42,23 @@ class UserClass extends React.Component{
 
                 <h1>
                 
-               {count}
+                 
+                 Count:{count1}
+               
                  
                 </h1>
+
+                <button onClick={()=>{
+
+                    this.setState({
+                        count1:count1+1
+                    })
+
+                    
+                }}>
+
+                 CLICK ME
+                </button>
             </div>
         )
     }

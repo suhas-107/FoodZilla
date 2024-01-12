@@ -34551,43 +34551,50 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _userClass = require("./UserClass");
 var _userClassDefault = parcelHelpers.interopDefault(_userClass);
-var _user = require("./user");
-var _userDefault = parcelHelpers.interopDefault(_user);
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "About",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
-                name: "Suhas(class)",
-                email: "deshpandesuhas107@gmail.com(class)"
-            }, void 0, false, {
-                fileName: "Components/About.js",
-                lineNumber: 10,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                fileName: "Components/About.js",
-                lineNumber: 12,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "Components/About.js",
-        lineNumber: 8,
-        columnNumber: 10
-    }, undefined);
-};
-_c = About;
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class About extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            parent: "Parent Rendered Constrcutor"
+        };
+        console.log(this.state.parent);
+    }
+    render() {
+        console.log("Render Ke pehle ka rendered");
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "About",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
+                    name: "Suhas(class)",
+                    email: "deshpandesuhas107@gmail.com(class)"
+                }, void 0, false, {
+                    fileName: "Components/About.js",
+                    lineNumber: 33,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "Components/About.js",
+                    lineNumber: 35,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Components/About.js",
+            lineNumber: 31,
+            columnNumber: 17
+        }, this);
+    }
+}
 exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$a401.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./UserClass":"3MU8M","./user":"1OUXw"}],"3MU8M":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./UserClass":"3MU8M","react":"21dqq"}],"3MU8M":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1835 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34602,13 +34609,16 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 class UserClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
+        console.log("Childs Constrcutor Rendered");
         this.state = {
-            count: 1
+            count1: 1,
+            count2: 2
         };
     }
     render() {
+        console.log("Childs Coponents Render Function Rendered");
         const { name, email } = this.props;
-        const { count } = this.state;
+        const { count1 } = this.state;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34618,7 +34628,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 29,
+                    lineNumber: 32,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34628,20 +34638,35 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 34,
+                    lineNumber: 37,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: count
+                    children: [
+                        "Count:",
+                        count1
+                    ]
+                }, void 0, true, {
+                    fileName: "Components/UserClass.js",
+                    lineNumber: 43,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            count1: count1 + 1
+                        });
+                    },
+                    children: "CLICK ME"
                 }, void 0, false, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 40,
+                    lineNumber: 51,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Components/UserClass.js",
-            lineNumber: 27,
+            lineNumber: 30,
             columnNumber: 13
         }, this);
     }
@@ -34653,53 +34678,7 @@ exports.default = UserClass;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1OUXw":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0137 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0137.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const User = (props)=>{
-    const { name, email } = props;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "Username",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: name
-            }, void 0, false, {
-                fileName: "Components/user.js",
-                lineNumber: 9,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: email
-            }, void 0, false, {
-                fileName: "Components/user.js",
-                lineNumber: 10,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "Components/user.js",
-        lineNumber: 8,
-        columnNumber: 7
-    }, undefined);
-};
-_c = User;
-exports.default = User;
-var _c;
-$RefreshReg$(_c, "User");
-
-  $parcel$ReactRefreshHelpers$0137.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kOU9n":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kOU9n":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a328 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
