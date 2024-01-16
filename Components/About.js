@@ -15,22 +15,34 @@ class About extends React.Component{
                 parent:"Parent Rendered Constrcutor"
              }
 
-             console.log(this.state.parent);
+            //  console.log("Parent Constructor Called");
 
         }
+
+        async componentDidMount(){
+           
+         const data= await fetch("https://api.github.com/users/suhas-107");
+     
+         const json= await data.json();
+     
+             // console.log(this.props.name+"Coponentdidmount called");
+     
+             console.log(json);
+         }
 
        render(){
               
 
 
-        console.log("Render Ke pehle ka rendered")
+      //   console.log("Parent Render Postion")
              
         
         return(
 
                 <div className="About">
           
-                <UserClass name="Suhas(class)" email="deshpandesuhas107@gmail.com(class)"/>
+                <UserClass name="Child1" email="Child1"/>
+                  <UserClass name="Child2" email="Child2"/>
     
                 <br/>
     

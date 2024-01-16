@@ -8,7 +8,7 @@ class UserClass extends React.Component{
 
         super(props);
 
-          console.log("Childs Constrcutor Rendered");
+        //   console.log(this.props.name +"COnstrcutor Called");
 
         this.state={
 
@@ -17,9 +17,13 @@ class UserClass extends React.Component{
 
         }
     }
+  
     render(){
+
+
+       
           
-         console.log("Childs Coponents Render Function Rendered");
+        //  console.log(this.props.name+"Childs Component Called");
 
         const {name,email}=this.props;
 

@@ -34559,30 +34559,44 @@ class About extends (0, _reactDefault.default).Component {
         this.state = {
             parent: "Parent Rendered Constrcutor"
         };
-        console.log(this.state.parent);
+    //  console.log("Parent Constructor Called");
+    }
+    async componentDidMount() {
+        const data = await fetch("https://api.github.com/users/suhas-107");
+        const json = await data.json();
+        // console.log(this.props.name+"Coponentdidmount called");
+        console.log(json);
     }
     render() {
-        console.log("Render Ke pehle ka rendered");
+        //   console.log("Parent Render Postion")
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "About",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
-                    name: "Suhas(class)",
-                    email: "deshpandesuhas107@gmail.com(class)"
+                    name: "Child1",
+                    email: "Child1"
                 }, void 0, false, {
                     fileName: "Components/About.js",
-                    lineNumber: 33,
+                    lineNumber: 44,
                     columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
+                    name: "Child2",
+                    email: "Child2"
+                }, void 0, false, {
+                    fileName: "Components/About.js",
+                    lineNumber: 45,
+                    columnNumber: 19
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "Components/About.js",
-                    lineNumber: 35,
+                    lineNumber: 47,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Components/About.js",
-            lineNumber: 31,
+            lineNumber: 42,
             columnNumber: 17
         }, this);
     }
@@ -34609,14 +34623,14 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 class UserClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
-        console.log("Childs Constrcutor Rendered");
+        //   console.log(this.props.name +"COnstrcutor Called");
         this.state = {
             count1: 1,
             count2: 2
         };
     }
     render() {
-        console.log("Childs Coponents Render Function Rendered");
+        //  console.log(this.props.name+"Childs Component Called");
         const { name, email } = this.props;
         const { count1 } = this.state;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34628,7 +34642,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 32,
+                    lineNumber: 36,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34638,7 +34652,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 37,
+                    lineNumber: 41,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34648,7 +34662,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 43,
+                    lineNumber: 47,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34660,13 +34674,13 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: "CLICK ME"
                 }, void 0, false, {
                     fileName: "Components/UserClass.js",
-                    lineNumber: 51,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Components/UserClass.js",
-            lineNumber: 30,
+            lineNumber: 34,
             columnNumber: 13
         }, this);
     }
