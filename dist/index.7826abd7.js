@@ -34549,6 +34549,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 var _userClass = require("./UserClass");
 var _userClassDefault = parcelHelpers.interopDefault(_userClass);
 var _react = require("react");
@@ -34557,46 +34558,85 @@ class About extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
         this.state = {
-            parent: "Parent Rendered Constrcutor"
+            userInfo: {
+                name: "dummy",
+                bio: "Dummybio",
+                company: "DummySatvacart"
+            }
         };
-    //  console.log("Parent Constructor Called");
     }
+    //  console.log("Parent Constructor Called");
     async componentDidMount() {
         const data = await fetch("https://api.github.com/users/suhas-107");
         const json = await data.json();
         // console.log(this.props.name+"Coponentdidmount called");
+        this.setState({
+            userInfo: json
+        });
         console.log(json);
     }
     render() {
         //   console.log("Parent Render Postion")
+        const { name, bio, company } = this.state.userInfo;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "About",
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
-                    name: "Child1",
-                    email: "Child1"
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "This is an about page I am goinf to use the github live api and fetch data below"
                 }, void 0, false, {
                     fileName: "Components/About.js",
-                    lineNumber: 44,
+                    lineNumber: 64,
+                    columnNumber: 18
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: [
+                        "Name: ",
+                        name
+                    ]
+                }, void 0, true, {
+                    fileName: "Components/About.js",
+                    lineNumber: 67,
+                    columnNumber: 18
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "Components/About.js",
+                    lineNumber: 71,
+                    columnNumber: 18
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: [
+                        "Bio: ",
+                        bio
+                    ]
+                }, void 0, true, {
+                    fileName: "Components/About.js",
+                    lineNumber: 72,
                     columnNumber: 17
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
-                    name: "Child2",
-                    email: "Child2"
-                }, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "Components/About.js",
-                    lineNumber: 45,
+                    lineNumber: 75,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: [
+                        "Company: ",
+                        company
+                    ]
+                }, void 0, true, {
+                    fileName: "Components/About.js",
+                    lineNumber: 77,
                     columnNumber: 19
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "Components/About.js",
-                    lineNumber: 47,
-                    columnNumber: 17
+                    lineNumber: 80,
+                    columnNumber: 19
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Components/About.js",
-            lineNumber: 42,
+            lineNumber: 61,
             columnNumber: 17
         }, this);
     }
@@ -34608,7 +34648,7 @@ exports.default = About;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./UserClass":"3MU8M","react":"21dqq"}],"3MU8M":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./UserClass":"3MU8M","react":"21dqq","react-router-dom":"9xmpe"}],"3MU8M":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1835 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
