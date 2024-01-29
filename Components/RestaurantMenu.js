@@ -7,22 +7,20 @@ import { useEffect ,useState } from "react";
 import { useParams } from "react-router-dom";
 import useResInfo from "../utils/useresInfo";
 
-// import { MENU_API_URL } from "../utils/constants";
+import { MENU_API_URL } from "../utils/Constants";
 
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu=()=>{
       
-
+   
 
 
     const{resid}=useParams();
 
     const restaurantinfo=useResInfo(resid);
  
-   
-
-
+  
 
 if(restaurantinfo===null){
   return (
