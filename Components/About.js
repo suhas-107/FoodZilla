@@ -1,5 +1,8 @@
 import { json } from "react-router-dom";
-import UserClass from "./UserClass";
+
+import User from "./User";
+
+
 
 
 
@@ -79,7 +82,7 @@ class About extends React.Component{
                   Company: {company}</p>
                   <br/>
     
-    
+                <User/>
     
                 </div> 
              )

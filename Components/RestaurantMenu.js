@@ -5,37 +5,24 @@
 import { useEffect ,useState } from "react";
 
 import { useParams } from "react-router-dom";
+import useResInfo from "../utils/useresInfo";
 
-import { MENU_API_URL } from "../constants";
+// import { MENU_API_URL } from "../utils/constants";
 
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu=()=>{
       
-    const[restaurantinfo,setrestaurantinfo]=useState(null);
+
 
 
     const{resid}=useParams();
+
+    const restaurantinfo=useResInfo(resid);
  
-    useEffect(()=>{
-
-     fetchmenu();
-    },[])
-  
-
-const fetchmenu= async ()=>{
-
-  const data= await fetch(MENU_API_URL+resid+"&catalog_qa=undefined&submitAction=ENTER")
-
-  const menudata= await data.json();
-
-  console.log(menudata);
-  setrestaurantinfo(menudata.data);
+   
 
 
-
-
-}
 
 if(restaurantinfo===null){
   return (
