@@ -1,5 +1,17 @@
-const Contact=()=>{
+import useOnlineStatus from "../utils/useOnlineStatus";
 
+
+const Contact=()=>{
+    
+  
+  const onlinestatus=useOnlineStatus();
+
+    if(onlinestatus===false){
+
+      return (<h1 className="OfflineH1">
+         OOPS I THINK YOU ARE OFFLINE 
+      </h1>)
+    }
 
     return(
          <div className="Contact">
@@ -8,7 +20,7 @@ const Contact=()=>{
           <h2>All the contact page will be done herer</h2>
 
           </div>
-
+        
 
     )
 }

@@ -1,4 +1,7 @@
 import { IMG_CDN_URL } from "../utils/Constants";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
+
 
 // Restaurant card component: Image, name, cuisine
 const RestaurantCard = ({
@@ -10,6 +13,17 @@ const RestaurantCard = ({
   costForTwo,
   avgRatingString,
 }) => {
+
+
+
+  const onlinestatus=useOnlineStatus();
+
+  if(onlinestatus===false){
+
+    return <h1 className="OfflineH1">
+       OOPS I THINK YOU ARE OFFLINE 
+    </h1>
+  }
   return (
     <div className="card">
       <img src={IMG_CDN_URL + cloudinaryImageId} />

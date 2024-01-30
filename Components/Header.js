@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import useOnlineStatus from "../utils/useOnlineStatus";
 import FoodFireLogo from "../Images/Food Fire Logo.png";
 
 // Title component for display logo
@@ -19,11 +21,17 @@ const Header = () => {
   // use useState for user logged in or logged out
   const [isLoggedin, setIsLoggedin] = useState(true);
 
+  const onlinestatus=useOnlineStatus();
+
   return (
     <div className="header">
       <Title />
       <div className="nav-items">
         <ul>
+
+         <li> 
+          Online Status:{onlinestatus ? "✅" :"🔴" }
+         </li>
          <Link to="/">
           <li>Home</li>
           </Link>

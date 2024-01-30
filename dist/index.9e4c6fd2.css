@@ -312,7 +312,7 @@
   top: 300px;
 }
 
-.resinfo {
+.resinfo, .OfflineH1 {
   flex-direction: column;
   gap: 10px;
   margin: 35px;

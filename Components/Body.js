@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"; /* This is named export */
 import Shimmer from "./Shimmer"; /* This is default export */
 import { swiggy_api_URL } from "../utils/Constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 // Filter the restaurant data according input type
 function filterData(searchText, restaurants) {
@@ -71,7 +72,14 @@ const Body = () => {
       setFilteredRestaurants(restaurants);
     }
   };
+    const onlinestatus=useOnlineStatus();
 
+    if(onlinestatus===false){
+
+      return <h1 className="OfflineH1">
+         OOPS I THINK YOU ARE OFFLINE 
+      </h1>
+    }
   // if allRestaurants is empty don't render restaurants cards
   if (!allRestaurants) return null;
 
