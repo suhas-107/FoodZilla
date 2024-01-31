@@ -1,13 +1,16 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
+// import Grocery from "./Components/Grocery";
 import Footer from "./Components/Footer";
 import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import Error from "./Components/Error";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import Shimmer from "./Components/Shimmer";
+
 
 /* My Food App structure will look like this, 
             1) Header
@@ -28,7 +31,7 @@ import RestaurantMenu from "./Components/RestaurantMenu";
 */
 
 // AppLayout component to render: Header, Body and Footer Component
-
+const Grocery=lazy(()=>import("./Components/Grocery"));
 const AppLayout = () => {
   return (
     
@@ -71,6 +74,14 @@ const appRouter = createBrowserRouter([
 
         path:"/",
         element:<Body/>
+      },
+      {
+
+        path:"/grocery",
+
+        element:<Suspense fallback={<h1>Loading...</h1>}>  <Grocery/>         </Suspense>
+        
+
       }
      
       

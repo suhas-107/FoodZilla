@@ -343,3 +343,13 @@
 
   top:150px;
 }
+.grocery-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  margin: 35px;
+  padding: 10px;
+
+  top:150px;
+}

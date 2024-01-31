@@ -312,7 +312,7 @@
   top: 300px;
 }
 
-.resinfo, .OfflineH1 {
+.resinfo, .OfflineH1, .grocery-section {
   flex-direction: column;
   gap: 10px;
   margin: 35px;

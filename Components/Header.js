@@ -37,7 +37,17 @@ const Header = () => {
           </Link>
           <Link to="/about"><li style={{padding:10}}>About</li></Link>
           
-         <Link to="/contact"> <li>Contact</li></Link>
+         <Link to="/contact"> 
+         
+         <li>Contact</li>
+         
+         
+         </Link>
+        <Link to="/grocery">
+         <li>
+          Grocery
+         </li>
+         </Link>
           <li>
             <i className="fa-solid fa-cart-shopping"></i>
           </li>
