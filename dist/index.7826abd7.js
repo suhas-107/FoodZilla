@@ -3065,7 +3065,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                             lineNumber: 82,
                             columnNumber: 60
                         }, undefined),
-                        "         "
+                        "    "
                     ]
                 }, void 0, true, {
                     fileName: "App.js",
@@ -27306,7 +27306,7 @@ var _s = $RefreshSig$();
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: "logo",
+            className: "w-23",
             src: (0, _foodFireLogoPngDefault.default),
             alt: "Food Fire Logo",
             title: "Food Fire"
@@ -27328,7 +27328,7 @@ const Header = ()=>{
     const [isLoggedin, setIsLoggedin] = (0, _react.useState)(true);
     const onlinestatus = (0, _useOnlineStatusDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
+        className: "flex",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "Components/Header.js",

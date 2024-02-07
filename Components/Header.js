@@ -8,7 +8,7 @@ import FoodFireLogo from "../Images/Food Fire Logo.png";
 const Title = () => (
   <a href="/">
     <img
-      className="logo"
+      className="w-23"
       src={FoodFireLogo}
       alt="Food Fire Logo"
       title="Food Fire"
@@ -24,7 +24,7 @@ const Header = () => {
   const onlinestatus=useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex">
       <Title />
       <div className="nav-items">
         <ul>
