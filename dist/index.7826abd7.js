@@ -27306,7 +27306,7 @@ var _s = $RefreshSig$();
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: "w-23",
+            className: "w-[100px]",
             src: (0, _foodFireLogoPngDefault.default),
             alt: "Food Fire Logo",
             title: "Food Fire"
@@ -27328,7 +27328,7 @@ const Header = ()=>{
     const [isLoggedin, setIsLoggedin] = (0, _react.useState)(true);
     const onlinestatus = (0, _useOnlineStatusDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex",
+        className: "flex justify-between bg-emerald-600",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "Components/Header.js",
@@ -27336,8 +27336,9 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-items",
+                className: "flex justify-center m-7 p-2",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "flex items-center justify-between space-x-4 font-semibold text-center",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: [
@@ -27352,6 +27353,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "hover:underline",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "Components/Header.js",
@@ -27366,9 +27368,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/about",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                style: {
-                                    padding: 10
-                                },
+                                className: "hover:underline",
                                 children: "About"
                             }, void 0, false, {
                                 fileName: "Components/Header.js",
@@ -27383,6 +27383,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/contact",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "hover:underline",
                                 children: "Contact"
                             }, void 0, false, {
                                 fileName: "Components/Header.js",
@@ -27397,6 +27398,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/grocery",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "hover:underline",
                                 children: "Grocery"
                             }, void 0, false, {
                                 fileName: "Components/Header.js",
@@ -27409,6 +27411,7 @@ const Header = ()=>{
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "hover:underline",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
                                 className: "fa-solid fa-cart-shopping"
                             }, void 0, false, {
@@ -27423,17 +27426,17 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: isLoggedin ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "logout-btn",
+                                className: "bg-blue-700 hover:bg-blue-500 text-amber-400 font-extrabold py-2 px-4 rounded-full",
                                 onClick: ()=>setIsLoggedin(false),
-                                children: "Logout"
+                                children: "Logout \uD83D\uDD13"
                             }, void 0, false, {
                                 fileName: "Components/Header.js",
                                 lineNumber: 57,
                                 columnNumber: 15
                             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "login-btn",
+                                className: "bg-blue-700 hover:bg-blue-500 text-amber-400 font-extrabold py-2 px-4 rounded-full",
                                 onClick: ()=>setIsLoggedin(true),
-                                children: "Login"
+                                children: "Login \uD83D\uDD12"
                             }, void 0, false, {
                                 fileName: "Components/Header.js",
                                 lineNumber: 64,
@@ -34272,22 +34275,21 @@ const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-container",
+                className: "flex justify-center items-center m-7 p-8",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "search-input",
+                        className: " flex placeholder-gray-500 border-2 border-stone-950 rounded-md w-[750px] h-[40px] m-6 text-start p-2 outline-8  ",
                         placeholder: "Search a restaurant you want...",
                         value: searchText,
                         // update the state variable searchText when we typing in input box
                         onChange: (e)=>setSearchText(e.target.value)
                     }, void 0, false, {
                         fileName: "Components/Body.js",
-                        lineNumber: 89,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "search-btn",
+                        className: "bg-orange-700 hover:bg-yellow-600 text-white font-extrabold py-2 px-4 rounded-full w-[120px] m-2 text-[20px] ",
                         onClick: ()=>{
                             // user click on button searchData function is called
                             searchData(searchText, allRestaurants);
@@ -34295,7 +34297,7 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "Components/Body.js",
-                        lineNumber: 97,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -34309,12 +34311,12 @@ const Body = ()=>{
                 children: errorMessage
             }, void 0, false, {
                 fileName: "Components/Body.js",
-                lineNumber: 107,
+                lineNumber: 110,
                 columnNumber: 24
             }, undefined),
             allRestaurants?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                 fileName: "Components/Body.js",
-                lineNumber: 111,
+                lineNumber: 114,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-list",
@@ -34325,18 +34327,18 @@ const Body = ()=>{
                             ...restaurant?.info
                         }, restaurant?.info?.id, false, {
                             fileName: "Components/Body.js",
-                            lineNumber: 118,
+                            lineNumber: 121,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "Components/Body.js",
-                        lineNumber: 117,
+                        lineNumber: 120,
                         columnNumber: 15
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "Components/Body.js",
-                lineNumber: 113,
+                lineNumber: 116,
                 columnNumber: 9
             }, undefined)
         ]

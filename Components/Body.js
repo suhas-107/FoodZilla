@@ -85,17 +85,20 @@ const Body = () => {
 
   return (
     <>
-      <div className="search-container">
+      <div className="flex justify-center items-center m-7 p-8">
+
+
         <input
-          type="text"
-          className="search-input"
+          
+          className=" flex placeholder-gray-500 border-2 border-stone-950 rounded-md w-[750px] h-[40px] m-6 text-start p-2 outline-8  "
+      
           placeholder="Search a restaurant you want..."
           value={searchText}
           // update the state variable searchText when we typing in input box
           onChange={(e) => setSearchText(e.target.value)}
         ></input>
         <button
-          className="search-btn"
+          className="bg-orange-700 hover:bg-yellow-600 text-white font-extrabold py-2 px-4 rounded-full w-[120px] m-2 text-[20px] "
           onClick={() => {
             // user click on button searchData function is called
             searchData(searchText, allRestaurants);
