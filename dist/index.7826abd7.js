@@ -34319,7 +34319,7 @@ const Body = ()=>{
                 lineNumber: 114,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-list",
+                className: "flex  flex-wrap",
                 children: filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "restaurants/" + restaurant.info.id,
@@ -34386,7 +34386,7 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, areaName, sla, cost
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
+        className: " m-[50px] w-[270px] p-[10px] max-w-sm rounded-md overflow-hidden shadow-2xl  border-black    ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: (0, _constants.IMG_CDN_URL) + cloudinaryImageId
