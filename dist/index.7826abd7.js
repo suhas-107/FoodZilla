@@ -34220,6 +34220,7 @@ const Body = ()=>{
     const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
     const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
     const [errorMessage, setErrorMessage] = (0, _react.useState)("");
+    const PromoRes = (0, _restaurantCard.PromotedRestaurant)((0, _restaurantCardDefault.default));
     console.log("SUHAS");
     // use useEffect for one time call getRestaurants using empty dependency array
     (0, _react.useEffect)(()=>{
@@ -34242,6 +34243,7 @@ const Body = ()=>{
             }
             // call the checkJsonData() function which return Swiggy Restaurant data
             const resData = await checkJsonData(json);
+            console.log(resData);
             // update the state variable restaurants with Swiggy API data
             setAllRestaurants(resData);
             setFilteredRestaurants(resData);
@@ -34267,7 +34269,7 @@ const Body = ()=>{
         children: "OOPS I THINK YOU ARE OFFLINE"
     }, void 0, false, {
         fileName: "Components/Body.js",
-        lineNumber: 79,
+        lineNumber: 82,
         columnNumber: 14
     }, undefined);
     // if allRestaurants is empty don't render restaurants cards
@@ -34285,7 +34287,7 @@ const Body = ()=>{
                         onChange: (e)=>setSearchText(e.target.value)
                     }, void 0, false, {
                         fileName: "Components/Body.js",
-                        lineNumber: 91,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34297,13 +34299,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "Components/Body.js",
-                        lineNumber: 100,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/Body.js",
-                lineNumber: 88,
+                lineNumber: 91,
                 columnNumber: 7
             }, undefined),
             errorMessage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34311,34 +34313,40 @@ const Body = ()=>{
                 children: errorMessage
             }, void 0, false, {
                 fileName: "Components/Body.js",
-                lineNumber: 110,
+                lineNumber: 113,
                 columnNumber: 24
             }, undefined),
             allRestaurants?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                 fileName: "Components/Body.js",
-                lineNumber: 114,
+                lineNumber: 117,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex  flex-wrap",
                 children: filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "restaurants/" + restaurant.info.id,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                        children: restaurant?.info?.aggregatedDiscountInfoV3.discountTag === "FLAT DEAL" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PromoRes, {
                             ...restaurant?.info
                         }, restaurant?.info?.id, false, {
                             fileName: "Components/Body.js",
-                            lineNumber: 121,
+                            lineNumber: 126,
+                            columnNumber: 87
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                            ...restaurant?.info
+                        }, restaurant?.info?.id, false, {
+                            fileName: "Components/Body.js",
+                            lineNumber: 129,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "Components/Body.js",
-                        lineNumber: 120,
+                        lineNumber: 123,
                         columnNumber: 15
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "Components/Body.js",
-                lineNumber: 116,
+                lineNumber: 119,
                 columnNumber: 9
             }, undefined)
         ]
@@ -34368,6 +34376,7 @@ $parcel$ReactRefreshHelpers$c0f2.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PromotedRestaurant", ()=>PromotedRestaurant);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../utils/Constants");
 var _useOnlineStatus = require("../utils/useOnlineStatus");
@@ -34489,9 +34498,37 @@ _s(RestaurantCard, "3l/A/RfYzFelD1NfZmaswYX8CjU=", false, function() {
     ];
 });
 _c = RestaurantCard;
+const PromotedRestaurant = (RestaurantCard)=>{
+    return (props)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    children: "Promoted"
+                }, void 0, false, {
+                    fileName: "Components/RestaurantCard.js",
+                    lineNumber: 66,
+                    columnNumber: 10
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                    ...props
+                }, void 0, false, {
+                    fileName: "Components/RestaurantCard.js",
+                    lineNumber: 68,
+                    columnNumber: 10
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "Components/RestaurantCard.js",
+            lineNumber: 64,
+            columnNumber: 10
+        }, undefined);
+    };
+};
+_c1 = PromotedRestaurant;
 exports.default = RestaurantCard;
-var _c;
+var _c, _c1;
 $RefreshReg$(_c, "RestaurantCard");
+$RefreshReg$(_c1, "PromotedRestaurant");
 
   $parcel$ReactRefreshHelpers$c0f2.postlude(module);
 } finally {

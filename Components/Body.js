@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard,{PromotedRestaurant, PromotedRestaurant} from "./RestaurantCard";
 import { useEffect, useState } from "react"; /* This is named export */
 import Shimmer from "./Shimmer"; /* This is default export */
 import { swiggy_api_URL } from "../utils/Constants";
@@ -20,6 +20,8 @@ const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
+
+  const PromoRes=PromotedRestaurant(RestaurantCard);
   console.log("SUHAS");
   // use useEffect for one time call getRestaurants using empty dependency array
   useEffect(() => {
@@ -49,6 +51,7 @@ const Body = () => {
 
       // call the checkJsonData() function which return Swiggy Restaurant data
       const resData = await checkJsonData(json);
+      console.log(resData);
 
       // update the state variable restaurants with Swiggy API data
       setAllRestaurants(resData);
@@ -118,7 +121,16 @@ const Body = () => {
           {filteredRestaurants.map((restaurant) => {
             return (
               <Link to={"restaurants/"+restaurant.info.id}>
+
+              
+              {restaurant?.info?.aggregatedDiscountInfoV3.discountTag==="FLAT DEAL" ? <PromoRes key={restaurant?.info?.id} {...restaurant?.info}/>
+              
+              :
               <RestaurantCard key={restaurant?.info?.id} {...restaurant?.info} />
+              
+              }
+              
+              
               </Link>
             );
           })}
