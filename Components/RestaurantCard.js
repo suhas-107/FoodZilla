@@ -12,6 +12,7 @@ const RestaurantCard = ({
   sla,
   costForTwo,
   avgRatingString,
+  aggregatedDiscountInfoV3
 }) => {
 
 
@@ -59,7 +60,7 @@ export const PromotedRestaurant=(RestaurantCard)=>{
     return (props)=>
     {
 
-
+     
       return(
          <div>
 

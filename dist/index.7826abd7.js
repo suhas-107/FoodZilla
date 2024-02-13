@@ -34325,17 +34325,17 @@ const Body = ()=>{
                 children: filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "restaurants/" + restaurant.info.id,
-                        children: restaurant?.info?.aggregatedDiscountInfoV3.discountTag === "FLAT DEAL" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PromoRes, {
+                        children: restaurant.info.aggregatedDiscountInfoV3 && restaurant.info.aggregatedDiscountInfoV3.discountTag === "FLAT DEAL" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                             ...restaurant?.info
                         }, restaurant?.info?.id, false, {
                             fileName: "Components/Body.js",
-                            lineNumber: 126,
-                            columnNumber: 87
-                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                            lineNumber: 128,
+                            columnNumber: 25
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PromoRes, {
                             ...restaurant?.info
                         }, restaurant?.info?.id, false, {
                             fileName: "Components/Body.js",
-                            lineNumber: 129,
+                            lineNumber: 130,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
@@ -34383,7 +34383,7 @@ var _useOnlineStatus = require("../utils/useOnlineStatus");
 var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
 var _s = $RefreshSig$();
 // Restaurant card component: Image, name, cuisine
-const RestaurantCard = ({ cloudinaryImageId, name, cuisines, areaName, sla, costForTwo, avgRatingString })=>{
+const RestaurantCard = ({ cloudinaryImageId, name, cuisines, areaName, sla, costForTwo, avgRatingString, aggregatedDiscountInfoV3 })=>{
     _s();
     const onlinestatus = (0, _useOnlineStatusDefault.default)();
     if (onlinestatus === false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34391,7 +34391,7 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, areaName, sla, cost
         children: "OOPS I THINK YOU ARE OFFLINE"
     }, void 0, false, {
         fileName: "Components/RestaurantCard.js",
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34401,28 +34401,28 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, areaName, sla, cost
                 src: (0, _constants.IMG_CDN_URL) + cloudinaryImageId
             }, void 0, false, {
                 fileName: "Components/RestaurantCard.js",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: name
             }, void 0, false, {
                 fileName: "Components/RestaurantCard.js",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
                 children: cuisines.join(", ")
             }, void 0, false, {
                 fileName: "Components/RestaurantCard.js",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
                 children: areaName
             }, void 0, false, {
                 fileName: "Components/RestaurantCard.js",
-                lineNumber: 32,
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -34441,54 +34441,54 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, areaName, sla, cost
                                 className: "fa-solid fa-star"
                             }, void 0, false, {
                                 fileName: "Components/RestaurantCard.js",
-                                lineNumber: 43,
+                                lineNumber: 44,
                                 columnNumber: 11
                             }, undefined),
                             avgRatingString
                         ]
                     }, void 0, true, {
                         fileName: "Components/RestaurantCard.js",
-                        lineNumber: 34,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                         children: "\u2022"
-                    }, void 0, false, {
-                        fileName: "Components/RestaurantCard.js",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: sla?.lastMileTravelString ?? "2.0 km"
                     }, void 0, false, {
                         fileName: "Components/RestaurantCard.js",
                         lineNumber: 47,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: "\u2022"
+                        children: sla?.lastMileTravelString ?? "2.0 km"
                     }, void 0, false, {
                         fileName: "Components/RestaurantCard.js",
                         lineNumber: 48,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: costForTwo ?? "\u20B9200 for two"
+                        children: "\u2022"
                     }, void 0, false, {
                         fileName: "Components/RestaurantCard.js",
                         lineNumber: 49,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        children: costForTwo ?? "\u20B9200 for two"
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantCard.js",
+                        lineNumber: 50,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantCard.js",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Components/RestaurantCard.js",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
 };
@@ -34506,20 +34506,20 @@ const PromotedRestaurant = (RestaurantCard)=>{
                     children: "Promoted"
                 }, void 0, false, {
                     fileName: "Components/RestaurantCard.js",
-                    lineNumber: 66,
+                    lineNumber: 67,
                     columnNumber: 10
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                     ...props
                 }, void 0, false, {
                     fileName: "Components/RestaurantCard.js",
-                    lineNumber: 68,
+                    lineNumber: 69,
                     columnNumber: 10
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "Components/RestaurantCard.js",
-            lineNumber: 64,
+            lineNumber: 65,
             columnNumber: 10
         }, undefined);
     };

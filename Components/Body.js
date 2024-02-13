@@ -122,13 +122,15 @@ const Body = () => {
             return (
               <Link to={"restaurants/"+restaurant.info.id}>
 
+             
               
-              {restaurant?.info?.aggregatedDiscountInfoV3.discountTag==="FLAT DEAL" ? <PromoRes key={restaurant?.info?.id} {...restaurant?.info}/>
+              {restaurant.info.aggregatedDiscountInfoV3 && restaurant.info.aggregatedDiscountInfoV3.discountTag === "FLAT DEAL" ? (
+                        <RestaurantCard key={restaurant?.info?.id} {...restaurant?.info} />
+              ) : (
+              <PromoRes key={restaurant?.info?.id} {...restaurant?.info} />
+                  )}
               
-              :
-              <RestaurantCard key={restaurant?.info?.id} {...restaurant?.info} />
               
-              }
               
               
               </Link>
