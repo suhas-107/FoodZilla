@@ -10,6 +10,7 @@ import useResInfo from "../utils/useresInfo";
 import { MENU_API_URL } from "../utils/Constants";
 
 import Shimmer from "./Shimmer";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu=()=>{
       
@@ -32,9 +33,19 @@ if(restaurantinfo===null){
 const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[0]?.card?.card?.info;
 
 
-const{itemCards}=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
-console.log(itemCards)
+
+
+
+// Creating Categories for Accordions 
+
+const categories=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+
+  (c)=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+);
+
+console.log(categories);
+
 
 
 
@@ -49,16 +60,14 @@ return(
       
       <div className="menu">
      <h1>MENU</h1>
-      
-      <ul>
+      <div>
+          {/* {This is an map function to map over each accordion} */}
 
-       {itemCards.map((item)=>(
+          {categories.map((category)=>(
 
-         <li key={item.card.info.id}>  {item.card.info.name}- Rs {item.card.info.price/100 || item.card.info.defaultPrice/100} /-</li>
-
-       ))}
-           
-      </ul>
+            <RestaurantCategory/>
+          ))}
+      </div>
      </div>
 
 

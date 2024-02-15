@@ -51,7 +51,7 @@ const Body = () => {
 
       // call the checkJsonData() function which return Swiggy Restaurant data
       const resData = await checkJsonData(json);
-      console.log(resData);
+     
 
       // update the state variable restaurants with Swiggy API data
       setAllRestaurants(resData);
