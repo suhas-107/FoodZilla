@@ -35039,10 +35039,10 @@ const RestaurantMenu = ()=>{
                 columnNumber: 6
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "m-[80px]",
+                className: "m-[80px] flex justify-center text-center",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit",
+                        className: " font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit flex justify-center text-center",
                         children: "MENU"
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",

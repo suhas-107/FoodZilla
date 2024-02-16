@@ -63,8 +63,8 @@ return(
      
    
       
-      <div className="m-[80px]">
-     <h1 className="block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit">MENU</h1>
+      <div className="m-[80px] flex justify-center text-center">
+     <h1 className=" font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit flex justify-center text-center">MENU</h1>
       <div>
           {/* {This is an map function to map over each accordion} */}
 
