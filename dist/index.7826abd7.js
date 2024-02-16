@@ -35001,65 +35001,71 @@ const RestaurantMenu = ()=>{
     const categories = restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
     console.log(categories);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "resinfo",
+        className: " ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white flex justify-center text-justify space-y-9 space-x-4",
                 children: [
                     " ",
-                    name
+                    name,
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-xl font-extrabold dark:text-white  flex justify-center text-justify m-[36px]  ",
+                        children: [
+                            " ",
+                            aggregatedDiscountInfo.header,
+                            " "
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/RestaurantMenu.js",
+                        lineNumber: 58,
+                        columnNumber: 6
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-xl font-extrabold dark:text-white  flex justify-center text-justify",
+                        children: [
+                            " ",
+                            costForTwoMessage,
+                            " "
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/RestaurantMenu.js",
+                        lineNumber: 60,
+                        columnNumber: 6
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
                 lineNumber: 56,
                 columnNumber: 6
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: [
-                    " ",
-                    aggregatedDiscountInfo.header,
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "Components/RestaurantMenu.js",
-                lineNumber: 58,
-                columnNumber: 6
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: [
-                    " ",
-                    costForTwoMessage,
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "Components/RestaurantMenu.js",
-                lineNumber: 59,
-                columnNumber: 6
-            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "menu",
+                className: "m-[80px]",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit",
                         children: "MENU"
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 62,
+                        lineNumber: 67,
                         columnNumber: 6
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {}, void 0, false, {
+                        children: categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                                data: category?.card?.card
+                            }, void 0, false, {
                                 fileName: "Components/RestaurantMenu.js",
-                                lineNumber: 68,
+                                lineNumber: 73,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 63,
+                        lineNumber: 68,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 61,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined)
         ]
@@ -35129,14 +35135,17 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const RestaurantCategory = ()=>{
+const RestaurantCategory = ({ data })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-            children: "Restaurant Category"
+        className: " flex space-y-20",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+            className: "relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500",
+            "data-collapse-target": "collapse-1",
+            children: data.title
         }, void 0, false, {
             fileName: "Components/RestaurantCategory.js",
             lineNumber: 8,
-            columnNumber: 10
+            columnNumber: 11
         }, undefined)
     }, void 0, false, {
         fileName: "Components/RestaurantCategory.js",

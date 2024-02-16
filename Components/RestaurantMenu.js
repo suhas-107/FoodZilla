@@ -51,21 +51,26 @@ console.log(categories);
 
 return(
 
-     <div className="resinfo">
+     <div className=" ">
 
-     <h1> {name}</h1>
+     <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white flex justify-center text-justify space-y-9 space-x-4"> {name} 
+     
+     <h2 className="text-xl font-extrabold dark:text-white  flex justify-center text-justify m-[36px]  "> {aggregatedDiscountInfo.header} </h2>
 
-     <h2> {aggregatedDiscountInfo.header} </h2>
-     <h2> {costForTwoMessage} </h2>
+     <h2 className="text-xl font-extrabold dark:text-white  flex justify-center text-justify"> {costForTwoMessage} </h2>
+     </h1>
+
+     
+   
       
-      <div className="menu">
-     <h1>MENU</h1>
+      <div className="m-[80px]">
+     <h1 className="block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit">MENU</h1>
       <div>
           {/* {This is an map function to map over each accordion} */}
 
           {categories.map((category)=>(
 
-            <RestaurantCategory/>
+            <RestaurantCategory data={category?.card?.card}/>
           ))}
       </div>
      </div>
