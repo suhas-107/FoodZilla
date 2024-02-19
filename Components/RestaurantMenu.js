@@ -60,23 +60,19 @@ return(
      <h2 className="text-xl font-extrabold dark:text-white  flex justify-center text-justify"> {costForTwoMessage} </h2>
      </h1>
 
-     <h1 className=" font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit flex justify-center text-center m-[10px]">MENU</h1>
+<h1 className=" font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit flex justify-center text-center m-[10px]">MENU</h1>
      
    
       
-      <div className="m-[80px] ">
-
-      <div>
+      <div className="m-[80px] flex justify-between text-center">
+     
+      <div >
           {/* {This is an map function to map over each accordion} */}
 
           {categories.map((category)=>(
 
             <RestaurantCategory data={category?.card?.card}/>
           ))}
-      </div>
-      <div>
-
-        
       </div>
      </div>
 

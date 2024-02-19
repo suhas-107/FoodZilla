@@ -34560,57 +34560,98 @@ var _constants = require("../utils/Constants");
 // Shimmer card to display with animation
 const CardShimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-img stroke animate"
-            }, void 0, false, {
-                fileName: "Components/Shimmer.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-title stroke animate"
-            }, void 0, false, {
-                fileName: "Components/Shimmer.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-tags stroke animate "
-            }, void 0, false, {
-                fileName: "Components/Shimmer.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-details stroke animate "
-            }, void 0, false, {
-                fileName: "Components/Shimmer.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+        className: "border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "animate-pulse flex space-x-4",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "rounded-full bg-slate-200 h-10 w-10"
+                }, void 0, false, {
+                    fileName: "Components/Shimmer.js",
+                    lineNumber: 9,
+                    columnNumber: 5
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex-1 space-y-6 py-1",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-2 bg-slate-200 rounded"
+                        }, void 0, false, {
+                            fileName: "Components/Shimmer.js",
+                            lineNumber: 11,
+                            columnNumber: 7
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "space-y-3",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "grid grid-cols-3 gap-4",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "h-2 bg-slate-200 rounded col-span-2"
+                                        }, void 0, false, {
+                                            fileName: "Components/Shimmer.js",
+                                            lineNumber: 14,
+                                            columnNumber: 11
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "h-2 bg-slate-200 rounded col-span-1"
+                                        }, void 0, false, {
+                                            fileName: "Components/Shimmer.js",
+                                            lineNumber: 15,
+                                            columnNumber: 11
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "Components/Shimmer.js",
+                                    lineNumber: 13,
+                                    columnNumber: 9
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "h-2 bg-slate-200 rounded"
+                                }, void 0, false, {
+                                    fileName: "Components/Shimmer.js",
+                                    lineNumber: 17,
+                                    columnNumber: 9
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "Components/Shimmer.js",
+                            lineNumber: 12,
+                            columnNumber: 7
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "Components/Shimmer.js",
+                    lineNumber: 10,
+                    columnNumber: 5
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "Components/Shimmer.js",
+            lineNumber: 8,
+            columnNumber: 3
+        }, undefined)
+    }, void 0, false, {
         fileName: "Components/Shimmer.js",
-        lineNumber: 6,
-        columnNumber: 5
+        lineNumber: 7,
+        columnNumber: 3
     }, undefined);
 };
 _c = CardShimmer;
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-container",
+        className: "flex flex-wrap",
         children: new Array((0, _constants.shimmer_card_unit)).fill(0).map((element, index)=>{
             return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CardShimmer, {}, index, false, {
                 fileName: "Components/Shimmer.js",
-                lineNumber: 19,
+                lineNumber: 29,
                 columnNumber: 16
             }, undefined);
         })
     }, void 0, false, {
         fileName: "Components/Shimmer.js",
-        lineNumber: 17,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
@@ -35044,31 +35085,24 @@ const RestaurantMenu = ()=>{
             }, void 0, false, {
                 fileName: "Components/RestaurantMenu.js",
                 lineNumber: 63,
-                columnNumber: 6
+                columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "m-[80px] ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
-                                data: category?.card?.card
-                            }, void 0, false, {
-                                fileName: "Components/RestaurantMenu.js",
-                                lineNumber: 74,
-                                columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
-                        fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 69,
-                        columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                        fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 77,
-                        columnNumber: 7
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                className: "m-[80px] flex justify-between text-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                            data: category?.card?.card
+                        }, void 0, false, {
+                            fileName: "Components/RestaurantMenu.js",
+                            lineNumber: 74,
+                            columnNumber: 13
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "Components/RestaurantMenu.js",
+                    lineNumber: 69,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
                 fileName: "Components/RestaurantMenu.js",
                 lineNumber: 67,
                 columnNumber: 7
@@ -35153,7 +35187,7 @@ const RestaurantCategory = ({ data })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: " flex justify-around",
+                className: " flex justify-between",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b-4 border-solid cursor-pointer border-slate-900 text-slate-700 rounded-t-1 group text-dark-500 text-3xl",
                     "data-collapse-target": "collapse-1",
