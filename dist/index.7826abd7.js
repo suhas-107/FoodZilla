@@ -35038,34 +35038,39 @@ const RestaurantMenu = ()=>{
                 lineNumber: 56,
                 columnNumber: 6
             }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: " font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit flex justify-center text-center m-[10px]",
+                children: "MENU"
+            }, void 0, false, {
+                fileName: "Components/RestaurantMenu.js",
+                lineNumber: 63,
+                columnNumber: 6
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "m-[80px] flex justify-center text-center",
+                className: "m-[80px] ",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: " font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit flex justify-center text-center",
-                        children: "MENU"
-                    }, void 0, false, {
-                        fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 67,
-                        columnNumber: 6
-                    }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
                                 data: category?.card?.card
                             }, void 0, false, {
                                 fileName: "Components/RestaurantMenu.js",
-                                lineNumber: 73,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 68,
+                        lineNumber: 69,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                        fileName: "Components/RestaurantMenu.js",
+                        lineNumber: 77,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 7
             }, undefined)
         ]
@@ -35135,30 +35140,121 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _itemList = require("./ItemList");
+var _itemListDefault = parcelHelpers.interopDefault(_itemList);
+var _s = $RefreshSig$();
 const RestaurantCategory = ({ data })=>{
+    _s();
+    const [isDataVisible, setDataVisible] = (0, _react.useState)(false);
+    const toggleDataVisibility = ()=>{
+        setDataVisible(!isDataVisible);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " flex space-y-20",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-            className: "relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b-4 border-solid cursor-pointer border-slate-900 text-slate-700 rounded-t-1 group text-dark-500 text-3xl",
-            "data-collapse-target": "collapse-1",
-            children: data.title
-        }, void 0, false, {
-            fileName: "Components/RestaurantCategory.js",
-            lineNumber: 8,
-            columnNumber: 11
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: " flex justify-around",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b-4 border-solid cursor-pointer border-slate-900 text-slate-700 rounded-t-1 group text-dark-500 text-3xl",
+                    "data-collapse-target": "collapse-1",
+                    onClick: toggleDataVisibility,
+                    children: [
+                        data.title,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: [
+                                " ",
+                                isDataVisible ? "\u2B07\uFE0F" : "\u2B06\uFE0F"
+                            ]
+                        }, void 0, true, {
+                            fileName: "Components/RestaurantCategory.js",
+                            lineNumber: 25,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "Components/RestaurantCategory.js",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "Components/RestaurantCategory.js",
+                lineNumber: 18,
+                columnNumber: 9
+            }, undefined),
+            isDataVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
+                    itemcards: data?.itemCards
+                }, void 0, false, {
+                    fileName: "Components/RestaurantCategory.js",
+                    lineNumber: 33,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "Components/RestaurantCategory.js",
+                lineNumber: 31,
+                columnNumber: 10
+            }, undefined) : ""
+        ]
+    }, void 0, true, {
         fileName: "Components/RestaurantCategory.js",
-        lineNumber: 6,
-        columnNumber: 9
+        lineNumber: 17,
+        columnNumber: 8
     }, undefined);
 };
+_s(RestaurantCategory, "6vKo8qWuYpzGnP9ci8dO1gZqXLw=");
 _c = RestaurantCategory;
 exports.default = RestaurantCategory;
 var _c;
 $RefreshReg$(_c, "RestaurantCategory");
 
   $parcel$ReactRefreshHelpers$0de6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ItemList":"iynmN","react":"21dqq"}],"iynmN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$18a2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$18a2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ItemList = ({ itemcards })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: itemcards.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: item?.card?.info?.name
+                    }, void 0, false, {
+                        fileName: "Components/ItemList.js",
+                        lineNumber: 7,
+                        columnNumber: 25
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "Components/ItemList.js",
+                    lineNumber: 6,
+                    columnNumber: 21
+                }, undefined)
+            }, item?.card?.info?.id, false, {
+                fileName: "Components/ItemList.js",
+                lineNumber: 5,
+                columnNumber: 17
+            }, undefined))
+    }, void 0, false, {
+        fileName: "Components/ItemList.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = ItemList;
+exports.default = ItemList;
+var _c;
+$RefreshReg$(_c, "ItemList");
+
+  $parcel$ReactRefreshHelpers$18a2.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

@@ -260,6 +260,10 @@ img, video {
   margin: 1.75rem;
 }
 
+.m-\[10px\] {
+  margin: 10px;
+}
+
 .m-\[36px\] {
   margin: 36px;
 }
@@ -274,10 +278,6 @@ img, video {
 
 .mb-4 {
   margin-bottom: 1rem;
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -332,6 +332,10 @@ img, video {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -348,6 +352,12 @@ img, video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
