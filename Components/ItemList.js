@@ -1,12 +1,21 @@
-const ItemList = ({itemcards}) => {
+import { motion } from "framer-motion";
+
+const ItemList = ({ itemcards }) => {
     return (
-        <div>
+        <div className="flex flex-col ml-4">
             {itemcards.map(item => (
-                <div key={item?.card?.info?.id}>
-                    <div>
-                        <h1>{item?.card?.info?.name}</h1>
+                <motion.div 
+                    key={item?.card?.info?.id} 
+                    className="border border-gray-200 rounded-lg overflow-hidden shadow-lg mb-4"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                >
+                    <div className="p-4">
+                        <h1 className="font-bold text-lg mb-2">{item?.card?.info?.name}</h1>
+                        <h2 className="text-gray-600">Price: {item?.card?.info?.price / 100} /- Rs</h2>
                     </div>
-                </div>
+                </motion.div>
             ))}
         </div>
     );

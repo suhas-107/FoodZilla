@@ -66,7 +66,7 @@ return(
       
       <div className="m-[80px] flex justify-between text-center">
      
-      <div >
+      <div className="flex flex-wrap space-y-5" >
           {/* {This is an map function to map over each accordion} */}
 
           {categories.map((category)=>(
