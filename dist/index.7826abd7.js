@@ -34571,7 +34571,7 @@ var _constants = require("../utils/Constants");
 // Shimmer card to display with animation
 const CardShimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto",
+        className: "restaurant-card rounded-md overflow-hidden shadow-2xl border-black transition-transform transform hover:-translate-y-1 hover:scale-105 m-[50px] w-[270px] p-[10px] h-[350px]",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "animate-pulse flex space-x-4",
             children: [
@@ -35292,8 +35292,13 @@ const ItemList = ({ itemcards })=>{
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                 className: "font-bold text-lg mb-2",
-                                children: item?.card?.info?.name
-                            }, void 0, false, {
+                                children: [
+                                    item?.card?.info?.name,
+                                    " ",
+                                    item?.card?.info?.isVeg === 1 ? "\uD83D\uDFE9" : "\uD83D\uDFE5",
+                                    " "
+                                ]
+                            }, void 0, true, {
                                 fileName: "Components/ItemList.js",
                                 lineNumber: 15,
                                 columnNumber: 25
@@ -35328,12 +35333,12 @@ const ItemList = ({ itemcards })=>{
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center ",
+                        className: "relative ",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                 src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + (item?.card?.info?.imageId || ""),
                                 alt: "Image",
-                                className: "w-48 h-48 object-cover rounded-md shadow-md relative"
+                                className: "w-48 h-48 object-cover rounded-md shadow-md relative bottom-5 left-10"
                             }, void 0, false, {
                                 fileName: "Components/ItemList.js",
                                 lineNumber: 22,
