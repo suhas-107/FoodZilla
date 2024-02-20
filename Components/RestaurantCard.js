@@ -8,7 +8,7 @@ const RestaurantCard = ({
   cuisines,
   areaName,
   sla,
-  costForTwo,
+  costForTwo, 
   avgRatingString,
   aggregatedDiscountInfoV3
 }) => {
