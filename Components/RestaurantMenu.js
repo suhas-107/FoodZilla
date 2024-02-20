@@ -20,6 +20,7 @@ const RestaurantMenu=()=>{
     const{resid}=useParams();
 
     const restaurantinfo=useResInfo(resid);
+    console.log(restaurantinfo);
  
   
 
@@ -30,7 +31,7 @@ if(restaurantinfo===null){
   )
 }
 
-const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[0]?.card?.card?.info;
+const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[2]?.card?.card?.info;
 
 
 
@@ -39,7 +40,7 @@ const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[0]?.c
 
 // Creating Categories for Accordions 
 
-const categories=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+const categories=restaurantinfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
 
   (c)=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 );

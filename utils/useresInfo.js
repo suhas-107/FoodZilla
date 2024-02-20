@@ -20,14 +20,14 @@ const useResInfo =(resid) => {
    
      const menudata= await data.json();
    
-     console.log(menudata);
+   
      setrestaurantinfo(menudata.data);
    
    
    
    
    }
-          
+       
 
    return restaurantinfo;
 }

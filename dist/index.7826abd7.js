@@ -34390,104 +34390,114 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, areaName, sla, cost
         children: "OOPS I THINK YOU ARE OFFLINE"
     }, void 0, false, {
         fileName: "Components/RestaurantCard.js",
-        lineNumber: 24,
-        columnNumber: 12
+        lineNumber: 20,
+        columnNumber: 7
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " m-[50px] w-[270px] p-[10px] max-w-sm rounded-md overflow-hidden shadow-2xl  border-black    ",
+        className: "restaurant-card rounded-md overflow-hidden shadow-2xl border-black transition-transform transform hover:-translate-y-1 hover:scale-105 m-[50px] w-[270px] p-[10px]",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _constants.IMG_CDN_URL) + cloudinaryImageId
+                src: (0, _constants.IMG_CDN_URL) + cloudinaryImageId,
+                alt: name
             }, void 0, false, {
                 fileName: "Components/RestaurantCard.js",
-                lineNumber: 30,
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: name
-            }, void 0, false, {
-                fileName: "Components/RestaurantCard.js",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                children: cuisines.join(", ")
-            }, void 0, false, {
-                fileName: "Components/RestaurantCard.js",
-                lineNumber: 32,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                children: areaName
-            }, void 0, false, {
-                fileName: "Components/RestaurantCard.js",
-                lineNumber: 33,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-4",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        style: avgRatingString < 4 ? {
-                            backgroundColor: "var(--light-red)"
-                        } : avgRatingString === "--" ? {
-                            backgroundColor: "white",
-                            color: "black"
-                        } : {
-                            color: "white"
-                        },
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantCard.js",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        children: cuisines.join(", ")
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantCard.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        children: areaName
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantCard.js",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                className: "fa-solid fa-star"
-                            }, void 0, false, {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                style: avgRatingString < 4 ? {
+                                    backgroundColor: "var(--light-red)"
+                                } : avgRatingString === "--" ? {
+                                    backgroundColor: "white",
+                                    color: "black"
+                                } : {
+                                    color: "white"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        className: "fa-solid fa-star"
+                                    }, void 0, false, {
+                                        fileName: "Components/RestaurantCard.js",
+                                        lineNumber: 43,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    avgRatingString
+                                ]
+                            }, void 0, true, {
                                 fileName: "Components/RestaurantCard.js",
-                                lineNumber: 44,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, undefined),
-                            avgRatingString
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: "\u2022"
+                            }, void 0, false, {
+                                fileName: "Components/RestaurantCard.js",
+                                lineNumber: 46,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: sla?.lastMileTravelString ?? "2.0 km"
+                            }, void 0, false, {
+                                fileName: "Components/RestaurantCard.js",
+                                lineNumber: 47,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: "\u2022"
+                            }, void 0, false, {
+                                fileName: "Components/RestaurantCard.js",
+                                lineNumber: 48,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: costForTwo ?? "\u20B9200 for two"
+                            }, void 0, false, {
+                                fileName: "Components/RestaurantCard.js",
+                                lineNumber: 49,
+                                columnNumber: 11
+                            }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "Components/RestaurantCard.js",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: "\u2022"
-                    }, void 0, false, {
-                        fileName: "Components/RestaurantCard.js",
-                        lineNumber: 47,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: sla?.lastMileTravelString ?? "2.0 km"
-                    }, void 0, false, {
-                        fileName: "Components/RestaurantCard.js",
-                        lineNumber: 48,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: "\u2022"
-                    }, void 0, false, {
-                        fileName: "Components/RestaurantCard.js",
-                        lineNumber: 49,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: costForTwo ?? "\u20B9200 for two"
-                    }, void 0, false, {
-                        fileName: "Components/RestaurantCard.js",
-                        lineNumber: 50,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantCard.js",
-                lineNumber: 34,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Components/RestaurantCard.js",
-        lineNumber: 29,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
@@ -34502,24 +34512,25 @@ const PromotedRestaurant = (RestaurantCard)=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    className: "font-semibold font-sans",
                     children: "Promoted"
                 }, void 0, false, {
                     fileName: "Components/RestaurantCard.js",
-                    lineNumber: 67,
-                    columnNumber: 10
+                    lineNumber: 61,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                     ...props
                 }, void 0, false, {
                     fileName: "Components/RestaurantCard.js",
-                    lineNumber: 69,
-                    columnNumber: 10
+                    lineNumber: 62,
+                    columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "Components/RestaurantCard.js",
-            lineNumber: 65,
-            columnNumber: 10
+            lineNumber: 60,
+            columnNumber: 7
         }, undefined);
     };
 };
@@ -35032,14 +35043,15 @@ const RestaurantMenu = ()=>{
     _s();
     const { resid } = (0, _reactRouterDom.useParams)();
     const restaurantinfo = (0, _useresInfoDefault.default)(resid);
+    console.log(restaurantinfo);
     if (restaurantinfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "Components/RestaurantMenu.js",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
-    const { name, aggregatedDiscountInfo, costForTwoMessage } = restaurantinfo?.cards[0]?.card?.card?.info;
+    const { name, aggregatedDiscountInfo, costForTwoMessage } = restaurantinfo?.cards[2]?.card?.card?.info;
     // Creating Categories for Accordions 
-    const categories = restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    const categories = restaurantinfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
     console.log(categories);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: " ",
@@ -35058,7 +35070,7 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 58,
+                        lineNumber: 59,
                         columnNumber: 6
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -35070,13 +35082,13 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 60,
+                        lineNumber: 61,
                         columnNumber: 6
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 56,
+                lineNumber: 57,
                 columnNumber: 6
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -35084,7 +35096,7 @@ const RestaurantMenu = ()=>{
                 children: "MENU"
             }, void 0, false, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 63,
+                lineNumber: 64,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35095,23 +35107,23 @@ const RestaurantMenu = ()=>{
                             data: category?.card?.card
                         }, void 0, false, {
                             fileName: "Components/RestaurantMenu.js",
-                            lineNumber: 74,
+                            lineNumber: 75,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "Components/RestaurantMenu.js",
-                    lineNumber: 69,
+                    lineNumber: 70,
                     columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 67,
+                lineNumber: 68,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Components/RestaurantMenu.js",
-        lineNumber: 54,
+        lineNumber: 55,
         columnNumber: 6
     }, undefined);
 };
@@ -35152,7 +35164,6 @@ const useResInfo = (resid)=>{
     const fetchmenu = async ()=>{
         const data = await fetch((0, _constants.MENU_API_URL) + resid + "&catalog_qa=undefined&submitAction=ENTER");
         const menudata = await data.json();
-        console.log(menudata);
         setrestaurantinfo(menudata.data);
     };
     return restaurantinfo;
@@ -35276,7 +35287,7 @@ const ItemList = ({ itemcards })=>{
                     duration: 0.2
                 },
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "p-4",
+                    className: "p-4 space-x-2",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             className: "font-bold text-lg mb-2",
@@ -35290,12 +35301,23 @@ const ItemList = ({ itemcards })=>{
                             className: "text-gray-600",
                             children: [
                                 "Price: ",
-                                item?.card?.info?.price / 100,
+                                item?.card?.info?.price ? item?.card?.info?.price / 100 : item?.card?.info?.defaultPrice / 100,
                                 " /- Rs"
                             ]
                         }, void 0, true, {
                             fileName: "Components/ItemList.js",
-                            lineNumber: 16,
+                            lineNumber: 17,
+                            columnNumber: 25
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            children: [
+                                '"',
+                                item?.card?.info?.description,
+                                '"'
+                            ]
+                        }, void 0, true, {
+                            fileName: "Components/ItemList.js",
+                            lineNumber: 18,
                             columnNumber: 25
                         }, undefined)
                     ]
