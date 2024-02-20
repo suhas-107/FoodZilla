@@ -17,6 +17,15 @@ const ItemList = ({ itemcards }) => {
                         <h2 className="text-gray-600">Price: {item?.card?.info?.price ? item?.card?.info?.price/100 :item?.card?.info?.defaultPrice/100 } /- Rs</h2>
                         <h3>"{item?.card?.info?.description}"</h3>
                     </div>
+
+                    <div className="flex justify-center ">
+                    <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + (item?.card?.info?.imageId || "")} alt="Image" className="w-48 h-48 object-cover rounded-md shadow-md relative" />
+                    <button className="absolute bottom-[140px] right-[100px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out">
+                     Add +
+                    </button>
+
+
+                    </div>
                 </motion.div>
             ))}
         </div>

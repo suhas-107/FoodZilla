@@ -35286,47 +35286,75 @@ const ItemList = ({ itemcards })=>{
                 transition: {
                     duration: 0.2
                 },
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "p-4 space-x-2",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "font-bold text-lg mb-2",
-                            children: item?.card?.info?.name
-                        }, void 0, false, {
-                            fileName: "Components/ItemList.js",
-                            lineNumber: 15,
-                            columnNumber: 25
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            className: "text-gray-600",
-                            children: [
-                                "Price: ",
-                                item?.card?.info?.price ? item?.card?.info?.price / 100 : item?.card?.info?.defaultPrice / 100,
-                                " /- Rs"
-                            ]
-                        }, void 0, true, {
-                            fileName: "Components/ItemList.js",
-                            lineNumber: 17,
-                            columnNumber: 25
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                            children: [
-                                '"',
-                                item?.card?.info?.description,
-                                '"'
-                            ]
-                        }, void 0, true, {
-                            fileName: "Components/ItemList.js",
-                            lineNumber: 18,
-                            columnNumber: 25
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "Components/ItemList.js",
-                    lineNumber: 14,
-                    columnNumber: 21
-                }, undefined)
-            }, item?.card?.info?.id, false, {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "p-4 space-x-2",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "font-bold text-lg mb-2",
+                                children: item?.card?.info?.name
+                            }, void 0, false, {
+                                fileName: "Components/ItemList.js",
+                                lineNumber: 15,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-gray-600",
+                                children: [
+                                    "Price: ",
+                                    item?.card?.info?.price ? item?.card?.info?.price / 100 : item?.card?.info?.defaultPrice / 100,
+                                    " /- Rs"
+                                ]
+                            }, void 0, true, {
+                                fileName: "Components/ItemList.js",
+                                lineNumber: 17,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                children: [
+                                    '"',
+                                    item?.card?.info?.description,
+                                    '"'
+                                ]
+                            }, void 0, true, {
+                                fileName: "Components/ItemList.js",
+                                lineNumber: 18,
+                                columnNumber: 25
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/ItemList.js",
+                        lineNumber: 14,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-center ",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + (item?.card?.info?.imageId || ""),
+                                alt: "Image",
+                                className: "w-48 h-48 object-cover rounded-md shadow-md relative"
+                            }, void 0, false, {
+                                fileName: "Components/ItemList.js",
+                                lineNumber: 22,
+                                columnNumber: 21
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "absolute bottom-[140px] right-[100px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out",
+                                children: "Add +"
+                            }, void 0, false, {
+                                fileName: "Components/ItemList.js",
+                                lineNumber: 23,
+                                columnNumber: 21
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/ItemList.js",
+                        lineNumber: 21,
+                        columnNumber: 21
+                    }, undefined)
+                ]
+            }, item?.card?.info?.id, true, {
                 fileName: "Components/ItemList.js",
                 lineNumber: 7,
                 columnNumber: 17
