@@ -35369,6 +35369,32 @@ const ItemList = ({ itemcards, isChecked })=>{
                         fileName: "Components/ItemList.js",
                         lineNumber: 27,
                         columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "relative",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + (filteredItem?.card?.info?.imageId || ""),
+                                alt: "Image",
+                                className: "w-48 h-48 object-cover rounded-md shadow-md relative bottom-5 left-10"
+                            }, void 0, false, {
+                                fileName: "Components/ItemList.js",
+                                lineNumber: 30,
+                                columnNumber: 19
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "absolute bottom-[140px] right-[100px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out",
+                                children: "Add +"
+                            }, void 0, false, {
+                                fileName: "Components/ItemList.js",
+                                lineNumber: 31,
+                                columnNumber: 19
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/ItemList.js",
+                        lineNumber: 29,
+                        columnNumber: 17
                     }, undefined)
                 ]
             }, filteredItem.id, true, {
@@ -35401,7 +35427,7 @@ const ItemList = ({ itemcards, isChecked })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 44,
+                                    lineNumber: 50,
                                     columnNumber: 19
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -35413,7 +35439,7 @@ const ItemList = ({ itemcards, isChecked })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 45,
+                                    lineNumber: 51,
                                     columnNumber: 19
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -35424,13 +35450,13 @@ const ItemList = ({ itemcards, isChecked })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 46,
+                                    lineNumber: 52,
                                     columnNumber: 19
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "Components/ItemList.js",
-                            lineNumber: 43,
+                            lineNumber: 49,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35442,7 +35468,7 @@ const ItemList = ({ itemcards, isChecked })=>{
                                     className: "w-48 h-48 object-cover rounded-md shadow-md relative bottom-5 left-10"
                                 }, void 0, false, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 50,
+                                    lineNumber: 56,
                                     columnNumber: 19
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35450,24 +35476,24 @@ const ItemList = ({ itemcards, isChecked })=>{
                                     children: "Add +"
                                 }, void 0, false, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 51,
+                                    lineNumber: 57,
                                     columnNumber: 19
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "Components/ItemList.js",
-                            lineNumber: 49,
+                            lineNumber: 55,
                             columnNumber: 17
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "Components/ItemList.js",
-                    lineNumber: 42,
+                    lineNumber: 48,
                     columnNumber: 15
                 }, undefined)
             }, item?.card?.info?.id, false, {
                 fileName: "Components/ItemList.js",
-                lineNumber: 35,
+                lineNumber: 41,
                 columnNumber: 13
             }, undefined))
     }, void 0, false, {

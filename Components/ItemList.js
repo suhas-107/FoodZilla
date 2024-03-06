@@ -25,7 +25,13 @@ const ItemList = ({ itemcards,isChecked }) => {
 
                 
                 <h3>"{filteredItem?.card?.info?.description}"</h3>
-              
+                 
+                <div className="relative">
+                  <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + (filteredItem?.card?.info?.imageId || "")} alt="Image" className="w-48 h-48 object-cover rounded-md shadow-md relative bottom-5 left-10" />
+                  <button className="absolute bottom-[140px] right-[100px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out">
+                    Add +
+                  </button>
+                </div>
                 
               </div>
              
