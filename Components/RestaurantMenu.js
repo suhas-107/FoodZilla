@@ -20,8 +20,12 @@ const RestaurantMenu=()=>{
     const{resid}=useParams();
 
     const restaurantinfo=useResInfo(resid);
-    console.log(restaurantinfo);
- 
+   
+    const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(prevState => !prevState);
+  }
   
 
 if(restaurantinfo===null){
@@ -31,7 +35,7 @@ if(restaurantinfo===null){
   )
 }
 
-const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[2]?.card?.card?.info;
+const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[0]?.card?.card?.info;
 
 
 
@@ -40,7 +44,7 @@ const{name,aggregatedDiscountInfo,costForTwoMessage}=restaurantinfo?.cards[2]?.c
 
 // Creating Categories for Accordions 
 
-const categories=restaurantinfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+const categories=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
 
   (c)=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 );
@@ -62,7 +66,32 @@ return(
      </h1>
 
 <h1 className=" font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit flex justify-center text-center m-[10px]">MENU</h1>
-     
+
+
+<label className="flex justify-center items-center cursor-pointer">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isChecked}
+        onChange={handleToggle}
+      />
+      <div
+        className={`relative w-11 h-6 bg-gray-200 ${
+          isChecked ? 'bg-green-800' : 'dark:bg-green-800'
+        } rounded-full peer`}
+      >
+        <span
+          className={`after:absolute after:content-[''] after:top-[2px] after:start-[2px] after:bg-green-600 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all ${
+            isChecked ? 'after:border-white' : 'dark:border-gray-600'
+          } ${
+            isChecked ? 'after:translate-x-full' : 'rtl:after:-translate-x-full'
+          }`}
+        ></span>
+      </div>
+      <span className="ms-3 text-sm font-extrabold text-gray-900 dark:text-gray-300">
+       VEG ONLY
+      </span>
+    </label>
    
       
       <div className="m-[80px] flex justify-between text-center">

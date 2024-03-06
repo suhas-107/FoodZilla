@@ -19,7 +19,9 @@ const useResInfo =(resid) => {
      const data= await fetch(MENU_API_URL+resid+"&catalog_qa=undefined&submitAction=ENTER")
    
      const menudata= await data.json();
-   
+      
+    
+     console.log(menudata);
    
      setrestaurantinfo(menudata.data);
    

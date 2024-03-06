@@ -8,3 +8,7 @@ export const swiggy_api_URL =
 export const shimmer_card_unit = 20;
 
 export const MENU_API_URL="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.634103384495464&lng=73.81745181977749&restaurantId="
+
+
+
+// https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.61610&lng=73.72860&restaurantId=491971&catalog_qa=undefined&submitAction=ENTER
