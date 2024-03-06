@@ -101,7 +101,7 @@ return(
 
           {categories.map((category)=>(
 
-            <RestaurantCategory data={category?.card?.card}/>
+            <RestaurantCategory data={category?.card?.card}  isChecked={isChecked}/>
           ))}
       </div>
      </div>

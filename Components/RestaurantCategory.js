@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({ data }) => {
+const RestaurantCategory = ({ data ,isChecked }) => {
     const [isDataVisible, setDataVisible] = useState(false);
 
     const toggleDataVisibility = () => {
@@ -28,7 +28,7 @@ const RestaurantCategory = ({ data }) => {
 
             {isDataVisible ? (
                 <div className="border border-slate-900">
-                    <ItemList itemcards={data?.itemCards} />
+                    <ItemList itemcards={data?.itemCards} isChecked={isChecked} />
                 </div>
             ) : null}
         </div>

@@ -35149,7 +35149,8 @@ const RestaurantMenu = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex flex-wrap space-y-5",
                     children: categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
-                            data: category?.card?.card
+                            data: category?.card?.card,
+                            isChecked: isChecked
                         }, void 0, false, {
                             fileName: "Components/RestaurantMenu.js",
                             lineNumber: 104,
@@ -35236,7 +35237,7 @@ var _react = require("react");
 var _itemList = require("./ItemList");
 var _itemListDefault = parcelHelpers.interopDefault(_itemList);
 var _s = $RefreshSig$();
-const RestaurantCategory = ({ data })=>{
+const RestaurantCategory = ({ data, isChecked })=>{
     _s();
     const [isDataVisible, setDataVisible] = (0, _react.useState)(false);
     const toggleDataVisibility = ()=>{
@@ -35278,7 +35279,8 @@ const RestaurantCategory = ({ data })=>{
             isDataVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "border border-slate-900",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
-                    itemcards: data?.itemCards
+                    itemcards: data?.itemCards,
+                    isChecked: isChecked
                 }, void 0, false, {
                     fileName: "Components/RestaurantCategory.js",
                     lineNumber: 31,
@@ -35319,10 +35321,61 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-const ItemList = ({ itemcards })=>{
+var _s = $RefreshSig$();
+const ItemList = ({ itemcards, isChecked })=>{
+    _s();
+    const [check, setCheck] = (0, _react.useState)(isChecked);
+    (0, _react.useEffect)(()=>{
+        // Update the state of check when isChecked prop changes
+        setCheck(isChecked);
+    }, [
+        isChecked
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex flex-col ml-4",
-        children: itemcards.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: check ? itemcards.filter((item)=>item?.card?.info?.isVeg === 1).map((filteredItem)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-4 space-x-2",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "font-bold text-lg mb-2",
+                        children: [
+                            filteredItem?.card?.info?.name,
+                            " '\uD83D\uDFE9'"
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/ItemList.js",
+                        lineNumber: 23,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-gray-600",
+                        children: [
+                            "Price: ",
+                            filteredItem?.card?.info?.price ? filteredItem?.card?.info?.price / 100 : filteredItem?.card?.info?.defaultPrice / 100,
+                            " /- Rs"
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/ItemList.js",
+                        lineNumber: 24,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: [
+                            '"',
+                            filteredItem?.card?.info?.description,
+                            '"'
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/ItemList.js",
+                        lineNumber: 27,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, filteredItem.id, true, {
+                fileName: "Components/ItemList.js",
+                lineNumber: 22,
+                columnNumber: 15
+            }, undefined)) : itemcards.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "border border-gray-200 rounded-lg overflow-hidden shadow-lg mb-4",
                 whileHover: {
                     scale: 1.05
@@ -35348,8 +35401,8 @@ const ItemList = ({ itemcards })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 29,
-                                    columnNumber: 25
+                                    lineNumber: 44,
+                                    columnNumber: 19
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                     className: "text-gray-600",
@@ -35360,8 +35413,8 @@ const ItemList = ({ itemcards })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 31,
-                                    columnNumber: 25
+                                    lineNumber: 45,
+                                    columnNumber: 19
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                     children: [
@@ -35371,17 +35424,17 @@ const ItemList = ({ itemcards })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 32,
-                                    columnNumber: 25
+                                    lineNumber: 46,
+                                    columnNumber: 19
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "Components/ItemList.js",
-                            lineNumber: 28,
-                            columnNumber: 20
+                            lineNumber: 43,
+                            columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "relative ",
+                            className: "relative",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                     src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + (item?.card?.info?.imageId || ""),
@@ -35389,40 +35442,41 @@ const ItemList = ({ itemcards })=>{
                                     className: "w-48 h-48 object-cover rounded-md shadow-md relative bottom-5 left-10"
                                 }, void 0, false, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 40,
-                                    columnNumber: 21
+                                    lineNumber: 50,
+                                    columnNumber: 19
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                     className: "absolute bottom-[140px] right-[100px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out",
                                     children: "Add +"
                                 }, void 0, false, {
                                     fileName: "Components/ItemList.js",
-                                    lineNumber: 41,
-                                    columnNumber: 21
+                                    lineNumber: 51,
+                                    columnNumber: 19
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "Components/ItemList.js",
-                            lineNumber: 39,
-                            columnNumber: 21
+                            lineNumber: 49,
+                            columnNumber: 17
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "Components/ItemList.js",
-                    lineNumber: 27,
-                    columnNumber: 19
+                    lineNumber: 42,
+                    columnNumber: 15
                 }, undefined)
             }, item?.card?.info?.id, false, {
                 fileName: "Components/ItemList.js",
-                lineNumber: 19,
-                columnNumber: 17
+                lineNumber: 35,
+                columnNumber: 13
             }, undefined))
     }, void 0, false, {
         fileName: "Components/ItemList.js",
-        lineNumber: 13,
-        columnNumber: 9
+        lineNumber: 17,
+        columnNumber: 5
     }, undefined);
 };
+_s(ItemList, "p/02UZmj5W36SKA9tCXYU/R3nbs=");
 _c = ItemList;
 exports.default = ItemList;
 var _c;
