@@ -35045,18 +35045,18 @@ const RestaurantMenu = ()=>{
     const { resid } = (0, _reactRouterDom.useParams)();
     const restaurantinfo = (0, _useresInfoDefault.default)(resid);
     const [isChecked, setIsChecked] = (0, _react.useState)(false);
+    const [showIndex, setShowIndex] = (0, _react.useState)(null);
     const handleToggle = ()=>{
         setIsChecked((prevState)=>!prevState);
     };
     if (restaurantinfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "Components/RestaurantMenu.js",
-        lineNumber: 34,
+        lineNumber: 37,
         columnNumber: 5
     }, undefined);
     const { name, aggregatedDiscountInfo, costForTwoMessage } = restaurantinfo?.cards[0]?.card?.card?.info;
     // Creating Categories for Accordions 
     const categories = restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    console.log(categories);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: " ",
         children: [
@@ -35074,7 +35074,7 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 63,
+                        lineNumber: 65,
                         columnNumber: 6
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -35086,13 +35086,13 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 65,
+                        lineNumber: 67,
                         columnNumber: 6
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 61,
+                lineNumber: 63,
                 columnNumber: 6
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -35100,7 +35100,7 @@ const RestaurantMenu = ()=>{
                 children: "MENU"
             }, void 0, false, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 68,
+                lineNumber: 70,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -35113,7 +35113,7 @@ const RestaurantMenu = ()=>{
                         onChange: handleToggle
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 72,
+                        lineNumber: 74,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35122,12 +35122,12 @@ const RestaurantMenu = ()=>{
                             className: `after:absolute after:content-[''] after:top-[2px] after:start-[2px] after:bg-green-600 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all ${isChecked ? "after:border-white" : "dark:border-gray-600"} ${isChecked ? "after:translate-x-full" : "rtl:after:-translate-x-full"}`
                         }, void 0, false, {
                             fileName: "Components/RestaurantMenu.js",
-                            lineNumber: 83,
+                            lineNumber: 85,
                             columnNumber: 9
                         }, undefined)
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 78,
+                        lineNumber: 80,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -35135,45 +35135,49 @@ const RestaurantMenu = ()=>{
                         children: "VEG ONLY"
                     }, void 0, false, {
                         fileName: "Components/RestaurantMenu.js",
-                        lineNumber: 91,
+                        lineNumber: 93,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 71,
+                lineNumber: 73,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "m-[80px] flex justify-between text-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex flex-wrap space-y-5",
-                    children: categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                    children: categories.map((category, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
                             data: category?.card?.card,
-                            isChecked: isChecked
+                            isChecked: isChecked,
+                            isDataVisible: index === showIndex ? true : false,
+                            setShowIndex: ()=>{
+                                setShowIndex(index);
+                            }
                         }, void 0, false, {
                             fileName: "Components/RestaurantMenu.js",
-                            lineNumber: 104,
+                            lineNumber: 106,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "Components/RestaurantMenu.js",
-                    lineNumber: 99,
+                    lineNumber: 101,
                     columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "Components/RestaurantMenu.js",
-                lineNumber: 97,
+                lineNumber: 99,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Components/RestaurantMenu.js",
-        lineNumber: 59,
+        lineNumber: 61,
         columnNumber: 6
     }, undefined);
 };
-_s(RestaurantMenu, "U2lIDQI727vzF++nhgu38WoGHH0=", false, function() {
+_s(RestaurantMenu, "I340HF8+R6jPMmQJK12Ljkd4CEk=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _useresInfoDefault.default)
@@ -35236,12 +35240,9 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _itemList = require("./ItemList");
 var _itemListDefault = parcelHelpers.interopDefault(_itemList);
-var _s = $RefreshSig$();
-const RestaurantCategory = ({ data, isChecked })=>{
-    _s();
-    const [isDataVisible, setDataVisible] = (0, _react.useState)(false);
+const RestaurantCategory = ({ data, isChecked, isDataVisible, setShowIndex })=>{
     const toggleDataVisibility = ()=>{
-        setDataVisible(!isDataVisible);
+        setShowIndex();
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-full",
@@ -35262,18 +35263,18 @@ const RestaurantCategory = ({ data, isChecked })=>{
                             ]
                         }, void 0, true, {
                             fileName: "Components/RestaurantCategory.js",
-                            lineNumber: 25,
+                            lineNumber: 28,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "Components/RestaurantCategory.js",
-                    lineNumber: 19,
+                    lineNumber: 22,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "Components/RestaurantCategory.js",
-                lineNumber: 18,
+                lineNumber: 21,
                 columnNumber: 13
             }, undefined),
             isDataVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35283,22 +35284,21 @@ const RestaurantCategory = ({ data, isChecked })=>{
                     isChecked: isChecked
                 }, void 0, false, {
                     fileName: "Components/RestaurantCategory.js",
-                    lineNumber: 31,
+                    lineNumber: 34,
                     columnNumber: 21
                 }, undefined)
             }, void 0, false, {
                 fileName: "Components/RestaurantCategory.js",
-                lineNumber: 30,
+                lineNumber: 33,
                 columnNumber: 17
             }, undefined) : null
         ]
     }, void 0, true, {
         fileName: "Components/RestaurantCategory.js",
-        lineNumber: 15,
+        lineNumber: 18,
         columnNumber: 9
     }, undefined);
 };
-_s(RestaurantCategory, "KWVNCCtmQYKyPqqSAEdnv3yp/Wo=");
 _c = RestaurantCategory;
 exports.default = RestaurantCategory;
 var _c;
@@ -35340,7 +35340,7 @@ const ItemList = ({ itemcards, isChecked })=>{
                         className: "font-bold text-lg mb-2",
                         children: [
                             filteredItem?.card?.info?.name,
-                            " '\uD83D\uDFE9'"
+                            " \uD83D\uDFE9"
                         ]
                     }, void 0, true, {
                         fileName: "Components/ItemList.js",

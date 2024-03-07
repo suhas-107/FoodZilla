@@ -20,7 +20,7 @@ const ItemList = ({ itemcards,isChecked }) => {
             .filter(item => item?.card?.info?.isVeg === 1)
             .map(filteredItem => (
               <div key={filteredItem.id} className="p-4 space-x-2">
-                <h1 className="font-bold text-lg mb-2">{filteredItem?.card?.info?.name} '🟩'</h1>
+                <h1 className="font-bold text-lg mb-2">{filteredItem?.card?.info?.name} 🟩</h1>
                 <h2 className="text-gray-600">Price: {filteredItem?.card?.info?.price ? filteredItem?.card?.info?.price / 100 : filteredItem?.card?.info?.defaultPrice / 100} /- Rs</h2>
 
                 

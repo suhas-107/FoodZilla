@@ -1,11 +1,14 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({ data ,isChecked }) => {
-    const [isDataVisible, setDataVisible] = useState(false);
-
+const RestaurantCategory = ({ data ,isChecked,isDataVisible,setShowIndex}) => {
+  
+    
+        
     const toggleDataVisibility = () => {
-        setDataVisible(!isDataVisible);
+        setShowIndex();
+       
+     
     };
 
     return (

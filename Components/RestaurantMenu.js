@@ -23,6 +23,9 @@ const RestaurantMenu=()=>{
    
     const [isChecked, setIsChecked] = useState(false);
 
+    
+    const [showIndex,setShowIndex]=useState(null);
+
   const handleToggle = () => {
     setIsChecked(prevState => !prevState);
   }
@@ -49,7 +52,6 @@ const categories=restaurantinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.c
   (c)=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 );
 
-console.log(categories);
 
 
 
@@ -99,9 +101,9 @@ return(
       <div className="flex flex-wrap space-y-5" >
           {/* {This is an map function to map over each accordion} */}
 
-          {categories.map((category)=>(
+          {categories.map((category,index)=>(
 
-            <RestaurantCategory data={category?.card?.card}  isChecked={isChecked}/>
+            <RestaurantCategory data={category?.card?.card}  isChecked={isChecked} isDataVisible={index===showIndex ? true :false} setShowIndex={()=>{setShowIndex(index)}}   />
           ))}
       </div>
      </div>
