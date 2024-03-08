@@ -23,7 +23,7 @@ const RestaurantMenu=()=>{
    
     const [isChecked, setIsChecked] = useState(false);
 
-    
+    const [isAccordionOpen,setAccordionOpen]=useState(false);
     const [showIndex,setShowIndex]=useState(null);
 
   const handleToggle = () => {
@@ -103,7 +103,7 @@ return(
 
           {categories.map((category,index)=>(
 
-            <RestaurantCategory data={category?.card?.card}  isChecked={isChecked} isDataVisible={index===showIndex ? true :false} setShowIndex={()=>{setShowIndex(index)}}   />
+            <RestaurantCategory data={category?.card?.card}  isChecked={isChecked} isDataVisible={index===showIndex ? true :false} setShowIndex={()=>{setShowIndex(index)}}  />
           ))}
       </div>
      </div>
